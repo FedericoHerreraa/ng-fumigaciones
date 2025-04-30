@@ -6,22 +6,17 @@ import imagen3 from "@/images/pest-control-30.jpg";
 export const CTA = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center w-[85%] gap-10 px-6 py-12 mx-auto h-[600px]">
-      {/* texto de CTA */}
-      <div className="md:max-w-lg space-y-6 ">
-        <h2 className="text-3xl font-bold leading-snug">
+      <div className="md:max-w-lg space-y-5 ">
+        <span className="font-semibold italic text-zinc-400">Solicitá una cotización sin compromiso.</span>
+        <h2 className="text-3xl font-bold leading-snug font-serif">
           ¿Necesitás un servicio de fumigación confiable y profesional?
         </h2>
-        <p className="text-lg leading-relaxed text-[#41413F]">
-          Protegé tu hogar o negocio con nuestras soluciones efectivas y seguras.
-          <br />
-          <span className="font-semibold">Solicitá una cotización sin compromiso.</span>
-        </p>
-        <button className="bg-[#4A9B57] text-white px-5 py-3 rounded-md hover:bg-gray-800 transition">
+        <p className="text-lg leading-relaxed text-[#41413F]">Protegé tu hogar o negocio con nuestras soluciones efectivas y seguras.</p>
+        <button className="bg-[#4A9B57] text-white px-5 py-3 cursor-pointer rounded-md hover:bg-gray-800 transition">
           Cotizá tu servicio
         </button>
       </div>
 
-      {/* Imagenes superpuestas */}
       <div className="relative w-[400px] h-[300px]">
         <div className="absolute top-[-100] left-[-100] w-full h-full z-10">
           <Image
