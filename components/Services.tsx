@@ -10,7 +10,7 @@ export const Services = () => {
   const [selectedTab, setSelectedTab] = useState("insectos");
 
   return (
-    <div className="min-h-[75vh] py-10 flex flex-col items-center">
+    <div id="services" className="min-h-[75vh] py-10 flex flex-col items-center">
       <p className="text-zinc-600">Servicios</p>
       <h1 className="text-5xl font-serif mb-6">Conoce nuestros servicios</h1>
 
@@ -37,21 +37,18 @@ export const Services = () => {
             <div className="flex flex-row gap-4 items-center">
               <Image src={Mosquito} alt="mosquito" width={50}/>
               <div>
-                {/* Icono  */}
                 Mosquito
               </div>
             </div>
             <div className="flex flex-row gap-4 items-center">
               <Image src={Alacran} alt="alacran" width={50}/>
               <div>
-                {/* Icono  */}
                 Alacran
               </div>
             </div>
             <div className="flex flex-row gap-4 items-center">
               <Image src={Cucaracha} alt="cucaracha" width={50}/>
               <div>
-                {/* Icono  */}
                 Cucaracha
               </div>
             </div>
