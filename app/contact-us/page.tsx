@@ -1,5 +1,11 @@
 import { AboutUsComponent } from "@/components/AboutUsComponent";
-import { ContactUsComponent } from "@/components/ContactUs";
+import { ContactUsComponent } from "@/app/contact-us/ContactUs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NG Desinfecciones | Contacto",
+  description: "Desinfecciones y limpieza de espacios",
+};
 
 export default function ContactUs() {
   return (

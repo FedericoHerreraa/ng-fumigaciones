@@ -11,10 +11,13 @@ import {
     FaUserGroup, 
     FaPenToSquare 
 } from "react-icons/fa6";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { scrollToSection } from '@/utils/functions';
 
 export const Header = () => {
     const pathname = usePathname()
+    const router = useRouter()
+    
     return (
         <header className="text-white shadow-lg">
             <div className="h-16 bg-[#596b58] p-4 flex items-center justify-between px-11 font-light">
@@ -23,10 +26,20 @@ export const Header = () => {
                         <FaHouse size={17} />
                         <p className='border-r-2 border-r-zinc-400 pr-10'>Inicio</p>
                     </Link>
-                    <Link href={'/services'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}> 
+                    <button 
+                        onClick={() => {
+                            if (pathname !== '/') {
+                                router.push('/')
+                                setTimeout(() => {
+                                    scrollToSection('services')
+                                }, 300)
+                            } else scrollToSection('services')
+                        }} 
+                        className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}
+                    > 
                         <FaHandshake size={19}/>
                         <p>Servicios</p>    
-                    </Link>
+                    </button>
                 </div>
                 <div className="flex items-center gap-10 text-zinc-300 text-xl">
                     <Link href={'/about-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/about-us' && 'text-white'}`}>
