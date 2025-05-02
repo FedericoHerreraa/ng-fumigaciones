@@ -1,6 +1,8 @@
+'use client'
+
 import logo from '@/images/logo.png'
 import Image from 'next/image'
-
+import Link from 'next/link';
 import { 
     FaLocationDot, 
     FaPhone, 
@@ -9,30 +11,32 @@ import {
     FaUserGroup, 
     FaPenToSquare 
 } from "react-icons/fa6";
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
+    const pathname = usePathname()
     return (
         <header className="text-white shadow-lg">
-            <div className="h-16 bg-[#596b58] p-4 flex items-center justify-between px-11 font-semibold">
-                <div className="flex items-center gap-10 text-zinc-200 text-lg">
-                    <div className='flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100'>
-                        <FaHouse size={17} className='text-zinc-200'/>
+            <div className="h-16 bg-[#596b58] p-4 flex items-center justify-between px-11 font-light">
+                <div className="flex items-center gap-10 text-zinc-300 text-xl">
+                    <Link href={'/'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/' && 'text-white'}`}>
+                        <FaHouse size={17} />
                         <p className='border-r-2 border-r-zinc-400 pr-10'>Inicio</p>
-                    </div>
-                    <div className='flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100'> 
-                        <FaHandshake size={19} className='text-zinc-200'/>
+                    </Link>
+                    <Link href={'/services'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}> 
+                        <FaHandshake size={19}/>
                         <p>Servicios</p>    
-                    </div>
+                    </Link>
                 </div>
-                <div className="flex items-center gap-10 text-zinc-200 text-lg">
-                    <div className='flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100'>
-                        <FaUserGroup size={17} className='text-zinc-200'/>
+                <div className="flex items-center gap-10 text-zinc-300 text-xl">
+                    <Link href={'/about-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/about-us' && 'text-white'}`}>
+                        <FaUserGroup size={17}/>
                         <p className='border-r-2 border-r-zinc-400 pr-10'>Sobre nosotros</p>
-                    </div>
-                    <div className='flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100'>
-                        <FaPenToSquare size={15} className='text-zinc-200'/>
+                    </Link>
+                    <Link href={'/contact-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/contact-us' && 'text-white'}`}>
+                        <FaPenToSquare size={15}/>
                         <p>Contactanos</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
             <div className="h-28 border-b border-b-green-700/80 bg-[#eaeaea] flex items-center justify-between px-10 font-semibold">
@@ -45,7 +49,7 @@ export const Header = () => {
                 </div>
                 <div className="flex items-center gap-10 text-[#41413F] text-lg">
                     <div className='flex items-center gap-3'>
-                        <FaPhone size={18} className='text-[#41413F]'/>
+                        <FaPhone size={18} className='text-[#41413F]'/>     
                         <p>Telefono 4552-1746</p>
                     </div>
                 </div>
