@@ -2,6 +2,7 @@ import Image from "next/image";
 import imagen1 from "@/images/control1.jpg";
 import imagen2 from "@/images/control2.jpeg";
 import imagen3 from "@/images/pest-control-30.jpg";
+import Link from "next/link";
 
 export const CTA = () => {
   return (
@@ -12,9 +13,9 @@ export const CTA = () => {
           ¿Necesitás un servicio de fumigación confiable y profesional?
         </h2>
         <p className="text-lg leading-relaxed text-[#41413F]">Protegé tu hogar o negocio con nuestras soluciones efectivas y seguras.</p>
-        <button className="bg-[#4A9B57] text-white px-5 py-3 cursor-pointer rounded-md hover:bg-gray-800 transition">
+        <Link href={'/contact-us'} className="bg-[#4A9B57] text-white px-5 py-3 cursor-pointer rounded-md hover:bg-gray-800 transition">
           Cotizá tu servicio
-        </button>
+        </Link>
       </div>
 
       <div className="relative w-[400px] h-[300px]">
