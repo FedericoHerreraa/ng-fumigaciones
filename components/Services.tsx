@@ -11,10 +11,10 @@ export const Services = () => {
 
   return (
     <div id="services" className="min-h-[75vh] py-10 flex flex-col items-center">
-      <p className="text-zinc-600">Servicios</p>
+      <p className="text-zinc-400">Servicios</p>
       <h1 className="text-5xl font-serif mb-6">Conoce nuestros servicios</h1>
 
-      <div className="w-[90vw] grid grid-cols-3">
+      <div className="w-[90%] grid grid-cols-3 rounded-t-2xl overflow-hidden">
         {["insectos", "roedores", "faunaUrbana"].map((tab) => (
           <button
             key={tab}
@@ -31,7 +31,7 @@ export const Services = () => {
         ))}
       </div>
 
-      <div className="bg-[#579e65] w-[90vw] p-6 text-white min-h-[400px]">
+      <div className="bg-[#579e65] shadow-2xl w-[90%] rounded-b-2xl p-6 text-white min-h-[400px]">
         {selectedTab === "insectos" && (
           <div>
             <div className="flex flex-row gap-4 items-center">

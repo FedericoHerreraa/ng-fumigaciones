@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const CTA = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center w-[85%] gap-10 px-6 py-12 mx-auto h-[600px]">
+    <div className="flex flex-col md:flex-row justify-between items-center w-[90%] gap-10 px-6 py-12 mx-auto h-[600px]">
       <div className="md:max-w-lg space-y-5 ">
         <span className="font-semibold italic text-zinc-400">Solicitá una cotización sin compromiso.</span>
         <h2 className="text-3xl font-bold leading-snug font-serif">

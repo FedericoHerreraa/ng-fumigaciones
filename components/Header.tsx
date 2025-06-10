@@ -20,11 +20,11 @@ export const Header = () => {
     
     return (
         <header className="text-white shadow-lg">
-            <div className="h-16 bg-[#596b58] p-4 flex items-center justify-between px-11 font-light">
-                <div className="flex items-center gap-10 text-zinc-300 text-xl">
-                    <Link href={'/'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/' && 'text-white'}`}>
+            <div className="h-16  bg-[#596b58] p-4 flex items-center justify-between px-11 font-light">
+                <div className="flex items-center gap-3 text-zinc-300 text-xl">
+                    <Link href={'/'} className={`flex bg-[#60835e]/70 rounded-md px-5 py-2 items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/' && 'text-white'}`}>
                         <FaHouse size={17} />
-                        <p className='border-r-2 border-r-zinc-400 pr-10'>Inicio</p>
+                        <p className=''>Inicio</p>
                     </Link>
                     <button 
                         onClick={() => {
@@ -35,18 +35,18 @@ export const Header = () => {
                                 }, 300)
                             } else scrollToSection('services')
                         }} 
-                        className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}
+                        className={`flex items-center gap-2 bg-[#60835e]/70 rounded-md px-5 py-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}
                     > 
                         <FaHandshake size={19}/>
                         <p>Servicios</p>    
                     </button>
                 </div>
-                <div className="flex items-center gap-10 text-zinc-300 text-xl">
-                    <Link href={'/about-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/about-us' && 'text-white'}`}>
+                <div className="flex items-center gap-3 text-zinc-300 text-xl">
+                    <Link href={'/about-us'} className={`flex items-center bg-[#60835e]/70 rounded-md px-5 py-2 gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/about-us' && 'text-white'}`}>
                         <FaUserGroup size={17}/>
-                        <p className='border-r-2 border-r-zinc-400 pr-10'>Sobre nosotros</p>
+                        <p className=''>Sobre nosotros</p>
                     </Link>
-                    <Link href={'/contact-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/contact-us' && 'text-white'}`}>
+                    <Link href={'/contact-us'} className={`flex items-center bg-[#60835e]/70 rounded-md px-5 py-2 gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/contact-us' && 'text-white'}`}>
                         <FaPenToSquare size={15}/>
                         <p>Contactanos</p>
                     </Link>
@@ -72,7 +72,7 @@ export const Header = () => {
                 <Image
                     src={logo}
                     alt="Logo"
-                    className="w-64 h-40"
+                    className="w-62 h-40"
                     priority
                 />
             </div>
