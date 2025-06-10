@@ -1,7 +1,7 @@
 
 
 
-export default async function DetailPage({ params }: { params: { nameService: string } }) {
+export default async function DetailPage({ params }: { params: Promise<{ nameService: string }> }) {
     const { nameService } = await params;
     
     return (
