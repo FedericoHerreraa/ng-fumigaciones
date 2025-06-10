@@ -12,20 +12,20 @@ import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2c5530] text-white pt-10 pb-4 mt-20 border-t-4 border-green-200">
+    <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         {/* Logo y descripción */}
         <div className="flex flex-col items-center md:items-start gap-4">
           <Image
             src={logo}
             alt="Logo NG Fumigaciones"
-            width={120}
-            height={80}
+            width={200}
+            height={160}
             className="object-contain"
           />
           <p className="text-sm text-gray-200 max-w-xs text-center md:text-left">
-            NG Fumigaciones - Soluciones profesionales en control de plagas para
-            hogares y empresas.
+            NG Desinfecciones - Soluciones profesionales en control de plagas
+            para hogares y empresas.
           </p>
         </div>
         {/* Enlaces rápidos */}
@@ -69,6 +69,18 @@ export const Footer = () => {
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-green-300" />
             <span>info@ngfumigaciones.com</span>
+          </div>
+          <div className="mt-4 rounded-lg overflow-hidden border border-green-900/30">
+            <iframe
+              title="Ubicación NG Desinfecciones"
+              src="https://www.google.com/maps?q=Av.+Del+Campo+1290,+CABA&output=embed"
+              width="250"
+              height="120"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
         {/* Redes sociales */}
