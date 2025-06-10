@@ -16,16 +16,16 @@ export const Services = () => {
   const [selectedTab, setSelectedTab] = useState("insectos");
 
   return (
-    <div className="min-h-[75vh] py-12 flex flex-col items-center bg-gradient-to-br from-green-50 to-green-100">
-      <p className="text-green-700 tracking-widest uppercase font-semibold mb-2">
+    <div className="min-h-[75vh] py-20 flex flex-col items-center bg-gradient-to-br from-green-50 to-green-100">
+      <p className="text-zinc-400 tracking-widest uppercase font-semibold mb-2">
         Servicios
       </p>
-      <h1 className="text-4xl md:text-5xl font-serif mb-10 text-green-900 drop-shadow-lg text-center">
+      <h1 className="text-4xl md:text-5xl font-serif mb-10 text-zinc-900 drop-shadow-lg text-center">
         Conoce nuestros servicios
       </h1>
 
       <div className="w-full max-w-4xl flex justify-center mb-10">
-        <div className="inline-flex rounded-full shadow-lg overflow-hidden border-2 border-green-200 bg-white">
+        <div className="inline-flex rounded-full shadow-lg overflow-hidden bg-white">
           {["insectos", "plagaUrbana"].map((tab) => (
             <button
               key={tab}
@@ -34,7 +34,7 @@ export const Services = () => {
                 ${
                   selectedTab === tab
                     ? "bg-[#579e65] text-white shadow-inner"
-                    : "bg-white text-green-700 hover:bg-green-100 hover:text-[#579e65]"
+                    : "bg-white text-green-700 hover:bg-zinc-100/50 cursor-pointer hover:text-[#579e65]"
                 } 
                 `}
             >
@@ -45,7 +45,7 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white/80 shadow-xl shadow-green-300 p-8 min-h-[500px] flex flex-col items-center">
+      <div className="w-full bg-white/80  p-8 min-h-[500px] flex flex-col items-center">
         {selectedTab === "insectos" && (
           <div className="flex flex-col md:flex-row gap-18 justify-center items-center">
             {insectos.map((item) => (
@@ -58,7 +58,7 @@ export const Services = () => {
                     src={item.image}
                     alt={item.name.toLowerCase()}
                     style={{ objectFit: "contain" }}
-                    className="rounded"
+                    className=""
                   />
                 </div>
                 <div className="mt-6 text-zinc-800 font-serif text-xl text-center drop-shadow-sm flex items-center">
