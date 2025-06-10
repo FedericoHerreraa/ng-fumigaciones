@@ -39,10 +39,9 @@ export const ContactUsComponent = () => {
                     Dejanos tu pregunta acá
                 </span>
             </h1>
-            <p className="mt-2 text-zinc-600">Nuestro equipo te contactará lo más rápido posible para darte una respuesta.</p>
             
             <div className="mt-10">
-                <section className="bg-zinc-100/80 h-fit w-3/4 rounded-md p-10">
+                <section className="bg-zinc-100/80 h-fit w-3/4 rounded-xl p-10">
                     <form action="" className="flex flex-col gap-5">
                         <div className="flex items-center gap-5 w-full">
                             <div className="w-1/2">
@@ -95,7 +94,7 @@ export const ContactUsComponent = () => {
                         </button>
                         <button
                             onClick={sendWhatsApp} 
-                            className="border border-green-500 text-black px-6 py-2 rounded-md mt-5 hover:bg-zinc-100 cursor-pointer transition-all duration-200"
+                            className="border border-green-500 text-black px-6 py-2 rounded-md mt-5 hover:bg-green-500/10 cursor-pointer transition-all duration-200"
                         >
                             WhatsApp
                         </button>

@@ -19,62 +19,89 @@ export const Header = () => {
     const router = useRouter()
     
     return (
-        <header className="text-white shadow-lg">
-            <div className="h-16 bg-[#596b58] p-4 flex items-center justify-between px-11 font-light">
-                <div className="flex items-center gap-10 text-zinc-300 text-xl">
-                    <Link href={'/'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/' && 'text-white'}`}>
-                        <FaHouse size={17} />
-                        <p className='border-r-2 border-r-zinc-400 pr-10'>Inicio</p>
-                    </Link>
-                    <button 
-                        onClick={() => {
-                            if (pathname !== '/') {
-                                router.push('/')
-                                setTimeout(() => {
-                                    scrollToSection('services')
-                                }, 300)
-                            } else scrollToSection('services')
-                        }} 
-                        className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/services' && 'text-white'}`}
-                    > 
-                        <FaHandshake size={19}/>
-                        <p>Servicios</p>    
-                    </button>
-                </div>
-                <div className="flex items-center gap-10 text-zinc-300 text-xl">
-                    <Link href={'/about-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/about-us' && 'text-white'}`}>
-                        <FaUserGroup size={17}/>
-                        <p className='border-r-2 border-r-zinc-400 pr-10'>Sobre nosotros</p>
-                    </Link>
-                    <Link href={'/contact-us'} className={`flex items-center gap-2 cursor-pointer hover:text-white transition-all duration-100 ${pathname === '/contact-us' && 'text-white'}`}>
-                        <FaPenToSquare size={15}/>
-                        <p>Contactanos</p>
-                    </Link>
+        <header className="relative text-white shadow-2xl">
+            <div className="relative h-20 bg-gradient-to-r from-[#2c5530] to-[#4a6b4d] backdrop-blur-sm">
+                <div className="relative z-10 h-full flex items-center justify-between px-8 lg:px-16">
+                    <nav className="flex items-center gap-3">
+                        <Link 
+                            href={'/'} 
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                        >
+                            <FaHouse size={16} className="transition-transform duration-300 group-hover:scale-110" />
+                            <span>Inicio</span>
+                        </Link>
+                        <button 
+                            onClick={() => {
+                                if (pathname !== '/') {
+                                    router.push('/')
+                                    setTimeout(() => {
+                                        scrollToSection('services')
+                                    }, 300)
+                                } else scrollToSection('services')
+                            }} 
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                        > 
+                            <FaHandshake size={18} className="transition-transform duration-300 group-hover:scale-110"/>
+                            <span>Servicios</span>    
+                        </button>
+                    </nav>
+
+                    <nav className="flex items-center gap-3">
+                        <Link 
+                            href={'/about-us'} 
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/about-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                        >
+                            <FaUserGroup size={16} className="transition-transform duration-300 group-hover:scale-110"/>
+                            <span>Sobre nosotros</span>
+                        </Link>
+                        <Link 
+                            href={'/contact-us'} 
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/contact-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                        >
+                            <FaPenToSquare size={14} className="transition-transform duration-300 group-hover:scale-110"/>
+                            <span>Contáctanos</span>
+                        </Link>
+                    </nav>
                 </div>
             </div>
-            <div className="h-28 border-b border-b-green-700/80 bg-[#eaeaea] flex items-center justify-between px-10 font-semibold">
-                <div className='flex items-start gap-2'>
-                    <FaLocationDot size={25} className='text-[#41413F] mt-1'/>
-                    <div className="flex flex-col items-start text-[#41413F]">
-                        <p>Av. Del Campo 1290</p>
-                        <p className='text-zinc-500 text-sm'>(C1427AOP) Capital Federal</p>
+
+            <div className="relative h-32 bg-gradient-to-br from-slate-50 to-gray-100 border-b border-green-200/50">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+                <div className="relative z-10 h-full flex items-center justify-between px-8 lg:px-16">
+                    <div className='group flex items-start gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300 hover:shadow-lg'>
+                        <div className="p-3 bg-green-600 rounded-full shadow-lg group-hover:bg-green-700 transition-colors duration-300">
+                            <FaLocationDot size={20} className='text-white'/>
+                        </div>
+                        <div className="flex flex-col items-start text-gray-700">
+                            <p className="font-semibold text-lg">Av. Del Campo 1290</p>
+                            <p className='text-gray-500 text-sm font-medium'>(C1427AOP) Capital Federal</p>
+                        </div>
                     </div>
-                </div>
-                <div className="flex items-center gap-10 text-[#41413F] text-lg">
-                    <div className='flex items-center gap-3'>
-                        <FaPhone size={18} className='text-[#41413F]'/>     
-                        <p>Telefono 4552-1746</p>
+
+                    <div className="group flex items-center gap-4 p-4 rounded-xl hover:bg-white/60 transition-all duration-300 hover:shadow-lg">
+                        <div className="p-3 bg-green-600 rounded-full shadow-lg group-hover:bg-green-700 transition-colors duration-300">
+                            <FaPhone size={18} className='text-white'/>     
+                        </div>
+                        <div className="flex flex-col">
+                            <p className="font-semibold text-lg text-gray-700">4552-1746</p>
+                            <p className="text-sm text-gray-500 font-medium">Línea directa</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10">
-                <Image
-                    src={logo}
-                    alt="Logo"
-                    className="w-64 h-40"
-                    priority
-                />
+            <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20">
+                <div className="relative group">
+                    <div className="absolute inset-0 bg-white rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                    <div className="relative bg-white px-6 py-4 rounded-full shadow-2xl ring-4 ring-white/30 group-hover:ring-white/50 transition-all duration-300 group-hover:scale-105">
+                        <Image
+                            src={logo}
+                            alt="Logo"
+                            className="w-52 h-32 object-contain"
+                            priority
+                        />
+                    </div>
+                </div>
             </div>
         </header>
     )
