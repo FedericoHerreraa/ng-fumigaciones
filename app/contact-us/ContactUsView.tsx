@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
 
-export const ContactUsComponent = () => {
+export const ContactUsView = () => {
     const [formState, setFormState] = useState({
         name: '',
         email: '',
