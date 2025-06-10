@@ -1,10 +1,125 @@
-
-
+import Link from "next/link";
+import {
+  FaLocationDot,
+  FaPhone,
+  FaEnvelope,
+  FaInstagram,
+  FaFacebook,
+  FaWhatsapp,
+} from "react-icons/fa6";
+import Image from "next/image";
+import logo from "@/images/logo.png";
 
 export const Footer = () => {
-    return (
-        <footer className="h-56 bg-[#596b58] mt-20">
-
-        </footer>
-    )
-}
+  return (
+    <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
+        {/* Logo y descripción */}
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <Image
+            src={logo}
+            alt="Logo NG Fumigaciones"
+            width={200}
+            height={160}
+            className="object-contain"
+          />
+          <p className="text-sm text-gray-200 max-w-xs text-center md:text-left">
+            NG Desinfecciones - Soluciones profesionales en control de plagas
+            para hogares y empresas.
+          </p>
+        </div>
+        {/* Enlaces rápidos */}
+        <div className="flex flex-col gap-2">
+          <h4 className="font-semibold text-lg mb-2 text-green-100">Enlaces</h4>
+          <Link href="/" className="hover:text-green-300 transition-colors">
+            Inicio
+          </Link>
+          <Link
+            href="/#services"
+            className="hover:text-green-300 transition-colors"
+          >
+            Servicios
+          </Link>
+          <Link
+            href="/about-us"
+            className="hover:text-green-300 transition-colors"
+          >
+            Sobre nosotros
+          </Link>
+          <Link
+            href="/contact-us"
+            className="hover:text-green-300 transition-colors"
+          >
+            Contáctanos
+          </Link>
+        </div>
+        {/* Contacto */}
+        <div className="flex flex-col gap-2">
+          <h4 className="font-semibold text-lg mb-2 text-green-100">
+            Contacto
+          </h4>
+          <div className="flex items-center gap-2">
+            <FaLocationDot className="text-green-300" />
+            <span>Av. Del Campo 1290, CABA</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaPhone className="text-green-300" />
+            <span>4552-1746</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaEnvelope className="text-green-300" />
+            <span>info@ngfumigaciones.com</span>
+          </div>
+          <div className="mt-4 rounded-lg overflow-hidden border border-green-900/30">
+            <iframe
+              title="Ubicación NG Desinfecciones"
+              src="https://www.google.com/maps?q=Av.+Del+Campo+1290,+CABA&output=embed"
+              width="250"
+              height="120"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        {/* Redes sociales */}
+        <div className="flex flex-col gap-2 items-center md:items-end">
+          <h4 className="font-semibold text-lg mb-2 text-green-100">
+            Seguinos
+          </h4>
+          <div className="flex gap-4">
+            <a
+              href="https://wa.me/541112345678"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp className="text-green-400 hover:text-green-200 text-2xl transition-colors" />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="text-blue-400 hover:text-blue-200 text-2xl transition-colors" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="text-pink-300 hover:text-pink-100 text-2xl transition-colors" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="mt-8 border-t border-green-900/30 pt-4 text-center text-xs text-gray-300">
+        © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
+        reservados.
+      </div>
+    </footer>
+  );
+};
