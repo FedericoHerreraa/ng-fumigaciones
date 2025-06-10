@@ -9,6 +9,7 @@ import Pulga from "@/images/pulga.png";
 import Palomas from "@/images/palomas.png";
 import Roedores from "@/images/roedores.png";
 import Murcielagos from "@/images/murcielagos.png";
+import Link from "next/link";
 
 import { FaArrowRight } from "react-icons/fa";
 
@@ -16,7 +17,7 @@ export const Services = () => {
   const [selectedTab, setSelectedTab] = useState("insectos");
 
   return (
-    <div className="min-h-[75vh] py-20 flex flex-col items-center bg-gradient-to-br from-green-50 to-green-100">
+    <div id="services" className="min-h-[70vh] py-20 flex flex-col items-center bg-gradient-to-br from-green-50/50 to-green-100">
       <p className="text-zinc-400 tracking-widest uppercase font-semibold mb-2">
         Servicios
       </p>
@@ -45,54 +46,47 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white/80  p-8 min-h-[500px] flex flex-col items-center">
-        {selectedTab === "insectos" && (
-          <div className="flex flex-col md:flex-row gap-18 justify-center items-center">
-            {insectos.map((item) => (
-              <div
-                key={item.name}
-                className="bg-white shadow-xl border border-zinc-200 p-0 pb-6 flex flex-col items-center w-80 polaroid hover:scale-105 hover:shadow-2xl transition-transform duration-300 cursor-pointer group"
-              >
-                <div className="bg-zinc-100 w-full flex justify-center border-b border-zinc-200">
+      <div className="w-full border-y-2 border-y-zinc-400/50 border-dashed p-8 min-h-[500px] flex flex-col items-center justify-center">
+        <div className={`flex flex-col md:flex-row justify-center items-center ${selectedTab === "insectos" ? "gap-18" : "gap-30"}`}>
+          {(selectedTab === "insectos" ? insectos : plagasUrbanas).map((item) => {
+            const cardContent = (
+              <>
+                <div className={`bg-zinc-100 w-full flex justify-center border-b border-zinc-200 ${selectedTab === "insectos" ? "rounded-t-lg" : ""}`}>
                   <Image
                     src={item.image}
                     alt={item.name.toLowerCase()}
                     style={{ objectFit: "contain" }}
-                    className=""
+                    className={selectedTab === "insectos" ? "rounded-t-lg" : "rounded"}
                   />
                 </div>
                 <div className="mt-6 text-zinc-800 font-serif text-xl text-center drop-shadow-sm flex items-center">
                   {item.name}
                   <FaArrowRight className="text-green-600 text-lg ml-2 transition-transform duration-300 group-hover:translate-x-2" />
                 </div>
-              </div>
-            ))}
+              </>
+            );
 
-          </div>
-        )}
-        {selectedTab === "plagaUrbana" && (
-          <div className="flex flex-col md:flex-row gap-30 justify-center items-center">
-            {plagasUrbanas.map((item) => (
-              <div
+            const cardClasses = "bg-white shadow-xl rounded-lg border border-zinc-200 p-0 pb-6 flex flex-col items-center w-80 polaroid hover:scale-105 hover:shadow-2xl transition-transform duration-300 cursor-pointer group";
+
+            return selectedTab === "plagaUrbana" ? (
+              <Link
+                href={`/detail/${item.name.toLowerCase()}`}
                 key={item.name}
-                className="bg-white shadow-xl border border-zinc-200 p-0 pb-6 flex flex-col items-center w-80 polaroid hover:scale-105 hover:shadow-2xl transition-transform duration-300 cursor-pointer group"
+                className={cardClasses}
               >
-                <div className="bg-zinc-100 w-full flex justify-center border-b border-zinc-200">
-                  <Image
-                    src={item.image}
-                    alt={item.name.toLowerCase()}
-                    style={{ objectFit: "contain" }}
-                    className="rounded"
-                  />
-                </div>
-                <div className="mt-6 text-zinc-800 font-serif text-xl text-center drop-shadow-sm flex items-center">
-                  {item.name}
-                  <FaArrowRight className="text-green-600 text-lg ml-2 transition-transform duration-300 group-hover:translate-x-2" />
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+                {cardContent}
+              </Link>
+            ) : (
+              <Link
+                href={`/detail/${item.name.toLowerCase()}`}
+                key={item.name}
+                className={cardClasses}
+              >
+                {cardContent}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
