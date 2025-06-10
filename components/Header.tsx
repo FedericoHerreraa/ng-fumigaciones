@@ -20,12 +20,12 @@ export const Header = () => {
     
     return (
         <header className="relative text-white shadow-2xl">
-            <div className="relative h-20 bg-gradient-to-r from-[#2c5530] to-[#4a6b4d] backdrop-blur-sm">
+            <div className="relative h-20 bg-[#4a6b4d] backdrop-blur-sm">
                 <div className="relative z-10 h-full flex items-center justify-between px-8 lg:px-16">
                     <nav className="flex items-center gap-3">
                         <Link 
                             href={'/'} 
-                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                         >
                             <FaHouse size={16} className="transition-transform duration-300 group-hover:scale-110" />
                             <span>Inicio</span>
@@ -39,7 +39,7 @@ export const Header = () => {
                                     }, 300)
                                 } else scrollToSection('services')
                             }} 
-                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                         > 
                             <FaHandshake size={18} className="transition-transform duration-300 group-hover:scale-110"/>
                             <span>Servicios</span>    
@@ -49,14 +49,14 @@ export const Header = () => {
                     <nav className="flex items-center gap-3">
                         <Link 
                             href={'/about-us'} 
-                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/about-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/about-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                         >
                             <FaUserGroup size={16} className="transition-transform duration-300 group-hover:scale-110"/>
                             <span>Sobre nosotros</span>
                         </Link>
                         <Link 
                             href={'/contact-us'} 
-                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 ${pathname === '/contact-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100'}`}
+                            className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/contact-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                         >
                             <FaPenToSquare size={14} className="transition-transform duration-300 group-hover:scale-110"/>
                             <span>Contáctanos</span>

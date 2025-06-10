@@ -1,5 +1,5 @@
 import { AboutUsComponent } from "@/components/AboutUsComponent";
-import { ContactUsComponent } from "@/app/contact-us/ContactUs";
+import { ContactUsController } from "@/app/contact-us/ContactUsController";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactUs() {
   return (
     <div className="mb-20">
-      <ContactUsComponent />
+      <ContactUsController />
       <AboutUsComponent />
     </div>
   );
