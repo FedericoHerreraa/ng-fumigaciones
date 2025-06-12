@@ -24,7 +24,7 @@ import {
 export const Header = () => {
     const pathname = usePathname()
     const router = useRouter()
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.innerWidth < 768;
 
     const handleClick = () => {
         if (pathname !== '/') {
