@@ -267,28 +267,35 @@ const serviceDetails = {
   mosquitos: {
     name: "Mosquitos",
     description:
-      "Los mosquitos son vectores de enfermedades como dengue, malaria y encefalitis. La hembra necesita alimentarse de sangre para desarrollar sus huevos, los cuales deposita en aguas estancadas.",
+      "Aparte de la irritación que produce en la piel la picadura de mosquitos, estos pueden transmitir diferentes enfermedades, como malaria, dengue y algunos tipos de encefalitis.\n\n" +
+      "Hay muchas especies de mosquitos, cada una con hábitos específicos, pero que comparten ciertas características: todos tienen un ciclo de 4 estadios en su ciclo de vida. La hembra, que es quien realiza las picaduras en animales de sangre caliente, lo hace para desarrollar su aparato reproductor. Luego deposita los huevos en alguna superficie de agua estancada, esta variará según la especie de mosquito.\n\n" +
+      "Los huevos eclosionan, permitiendo la salida de las larvas. Estas viven y se alimentan en el agua también. Más tarde pasan al 3° estadio del ciclo que es el de pupa, en este no se alimentan y quedan envueltos en un capullo. Al finalizar este período de desarrollo, emerge el mosquito adulto.\n\n" +
+      "Los sitios más comunes donde la hembra deposita los huevos, siempre en aguas estancadas, son: macetas, cubiertas viejas, recipientes, huecos en árboles, piletas, etc.\n\n" +
+      "El Aedes es un pequeño insecto de color gris y hábitos domiciliarios ya que habita junto con el hombre en el interior de su vivienda. Se distingue de otras especies por presentar bandas blancas en su abdomen y patas. La hembra debe alimentarse de sangre humana para obtener las proteínas que permiten el desarrollo de los casi 100 huevos que deposita luego de aparearse.",
     symptoms: [
       "Picazón e irritación en la piel",
       "Posible transmisión de enfermedades como dengue, malaria o encefalitis",
     ],
     treatment:
-      "Nebulización con máquinas ULV utilizando insecticidas líquidos como Proteginal y Glacoxan.",
+      "Para una mayor eficiencia en los tratamientos, nuestra empresa utiliza máquinas nebulizadoras ULV, que permiten que el producto utilizado alcance todas las superficies afectadas.",
     prevention:
       "Eliminar recipientes con agua estancada. Tapar tanques y canaletas. Colocar mosquiteros en aberturas.",
   },
   alacranes: {
     name: "Alacranes (Escorpiones)",
     description:
-      "Invertebrados con hábitos nocturnos que se alojan en zonas urbanas, grietas, desagües y sótanos. Algunas especies como Tityus trivittatus son peligrosas.",
+      "Los escorpiones o alacranes son invertebrados que viven en la Tierra hace más de 350 millones de años. Existen 16 familias, que a su vez, se diferencian en 1500 especies. Los escorpiones potencialmente peligrosos por la acción de su veneno, pertenecen a la familia Buthidae.\n\n" +
+      "En la Argentina esta familia está representada por los géneros Ananteris, Tityus y Zabius. Tityus trivittatus es el género distribuido con más frecuencia en la Argentina. Se caracteriza por tener la cola con doble punta. Se presenta en zonas urbanas, en estrecho contacto con el hombre, tales como sótanos de edificios, cámaras cloacales y hasta rejillas y respiraderos de los baños.\n\n" +
+      "Ubicación en los hogares: Tiene hábitos nocturnos, permaneciendo ocultos durante el día en el suelo o entre las cortezas de los árboles. Es frecuente encontrarlos en lugares habitados por el hombre en sitios con maderas caídas, escombros, tejas, ladrillos (ámbito peri domiciliario), pero además los encontramos dentro de las casas en grietas de paredes, pisos, zócalos, huecos de revestimiento de maderas, en desagües que conectan con cloacas, habitaciones y depósitos sin aireación, detrás de cuadros, bajo los muebles o entre la ropa y los zapatos. Se adaptan a la vida dentro o fuera de los hogares, incluso en departamentos de pisos altos, lo que evidencia su hábito domiciliario.\n\n" +
+      "Posee mayor actividad durante la noche y se alimenta de artrópodos, especialmente cucarachas.",
     symptoms: [
-      "Dolor intenso en el lugar de la picadura",
-      "Posibles síntomas sistémicos en casos graves, especialmente en niños",
+      "Picadura dolorosa, con posible enrojecimiento e hinchazón.",
+      "En casos graves: sudoración, palpitaciones, vómitos, dificultad respiratoria, especialmente en niños y personas sensibles.",
     ],
     treatment:
-      "Inspección, limpieza y sellado de grietas. Control profesional en caso de infestación.",
+      "Ante una picadura, consulte inmediatamente con un médico. Mantenga la calma, lave la zona con agua y jabón y evite remedios caseros. El control profesional incluye inspección, limpieza y sellado de grietas y posibles refugios.",
     prevention:
-      "Usar rejillas sanitarias, burletes, revocar grietas, controlar cámaras y desagües.",
+      "Utilizar rejillas sanitarias en desagües de ambientes y sanitarios. Controlar las entradas y salidas de cañerías, aberturas y hendiduras. Colocar burletes o alambre tejido (mosquitero) en puertas y ventanas. Revocar las paredes, reparar grietas en pisos, paredes y techos. Controlar cámaras subterráneas, cañerías, sótanos, huecos de ascensor y oquedades de las paredes.",
   },
   cucarachas: {
     name: "Cucarachas",
@@ -311,11 +318,11 @@ const serviceDetails = {
   pulgas: {
     name: "Pulgas",
     description:
-      "Insectos hematófagos que afectan a humanos y animales. Se reproducen rápidamente y viven en pisos y alfombras.",
-    symptoms: [
-      "Ronchas y picazón",
-      "Transmisión de enfermedades como la peste",
-    ],
+      "Las pulgas son insectos hematófagos, es decir que se alimentan de la sangre tanto del hombre como de otros animales. El control selectivo de pulgas ayuda a prevenir sus picaduras tanto a nuestras mascotas como a nosotros mismos.\n\n" +
+      "Las mordeduras de pulgas pueden ser responsables de alergias y ronchas que generan una sensación de picor muy molesta, pero además transmiten enfermedades.\n\n" +
+      "Las pulgas se reproducen con extrema facilidad, es por esto que es necesario mantener libre de pulgas a nuestras mascotas y realizar periódicamente un servicio preventivo en todas nuestras instalaciones.\n\n" +
+      "Los técnicos de NG Desinfecciones asesoran siempre a nuestros clientes en un control selectivo de las pulgas, dando recomendaciones de prevención, como por ejemplo: cómo aspirar los pisos de las viviendas y oficinas, para evitar que aniden. La pulga no anida ni pone huevos en nuestras mascotas, solo se alimenta de ellas. Es por ello que no basta con poner una pipeta al animal, debemos cuidar nuestros pisos y alfombras, ya que ahí es dónde viven y se reproducen.",
+    symptoms: ["Ronchas y picazón", "Transmisión de enfermedades"],
     treatment:
       "Control ambiental y recomendaciones específicas para aspirado y limpieza frecuente de pisos.",
     prevention:
