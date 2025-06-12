@@ -3,6 +3,7 @@
 import logo from '@/images/logo.png'
 import Image from 'next/image'
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import {
     FaLocationDot,
     FaPhone,
@@ -24,7 +25,19 @@ import {
 export const Header = () => {
     const pathname = usePathname()
     const router = useRouter()
-    const isMobile = window.innerWidth < 768;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkIsMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkIsMobile();
+
+        window.addEventListener('resize', checkIsMobile);
+
+        return () => window.removeEventListener('resize', checkIsMobile);
+    }, []);
 
     const handleClick = () => {
         if (pathname !== '/') {
