@@ -18,8 +18,9 @@ export default async function DetailPage({
   params: Promise<{ nameService: string }>;
 }) {
   const { nameService } = await params;
-  const info = serviceDetails[nameService as keyof typeof serviceDetails];
-
+  const info =
+    serviceDetails[nameService.toLowerCase() as keyof typeof serviceDetails];
+  console.log(nameService);
   if (!info) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center">
@@ -342,24 +343,42 @@ const serviceDetails = {
   roedores: {
     name: "Roedores",
     description:
-      "Plaga nocturna que deja rastros como excrementos, roeduras y ruidos. Es fundamental detectar signos para su control efectivo.",
+      "RATAS Y SU CONTROL:\n\n" +
+      "Toda campaña de control de roedores debe comenzar con un reconocimiento del área a tratar para detectar signos de infestación y los caminos que recorren, ya que la rata es de hábitos nocturnos; huye de la luz y el ruido y tiene sus senderos bien delimitados. Rara vez se ve una rata a la luz del día y es por eso la importancia de los signos que nos indiquen su presencia.\n\n" +
+      "Estos son:\n" +
+      "1) Deposiciones.\n" +
+      "2) Manchas de orina.\n" +
+      "3) Huellas en caso de existir polvo, manchas grasosas y pelos.\n" +
+      "4) Agujeros en pisos y muros.\n" +
+      "5) Nidos y sus materiales.\n" +
+      "6) Señales de roeduras en alimentos, papeles y muros.\n" +
+      '7) Ruidos de "carreras" y chillidos.\n\n' +
+      "Para los tratamientos contra roedores nuestros operadores pueden utilizar, según lo requiera el caso: cebos rodenticidas, trampas de pegamento, conos metálicos contra roedores y tramperas jaula.",
     symptoms: ["Contaminación de alimentos", "Propagación de enfermedades"],
     treatment:
-      "Uso de cebos rodenticidas, trampas pegamentosas, trampas jaula y conos metálicos.",
+      "CEBOS RODENTICIDAS: El éxito en el uso de los rodenticidas depende de la pericia del operador y del conocimiento del comportamiento de los roedores. Todas las formulaciones están diseñadas para introducir el veneno en el sistema digestivo del animal, ya sea directamente con cebos o indirectamente con formulaciones de contacto. Nuestra empresa utiliza rodenticidas apetecibles cuyo efecto se manifiesta tiempo después de la ingestión, previniendo el 'susto del cebo' y asegurando una buena ingestión. También se emplean cebos peletizados o bloques resistentes a la humedad.\n\n" +
+      "TRAMPAS PEGAMENTOSAS: PEGATRAP es una trampa pegamentosa sin veneno, no tóxica, desechable y descartable.\n\n" +
+      "CONOS METÁLICOS CONTRA ROEDORES: Armado y colocación de conos metálicos (fabricados a medida) en cableado del edificio, impidiendo el acceso y tránsito de los roedores.",
     prevention:
       "Sellado de entradas, higiene constante y monitoreo de señales de infestación.",
   },
   murcielagos: {
     name: "Murciélagos",
     description:
-      "Mamíferos nocturnos que emiten ultrasonidos y pueden instalarse en edificios. Algunas especies pueden ser portadoras de rabia.",
+      "Viven colectivamente; dependiendo de la especie, eligen distintas geografías como terrenos de caza: selvas, bosques, jardines, áreas cultivadas, corrientes de agua y caminos son las más frecuentes. Son fundamentalmente insectívoros, aunque también se nutren de néctares, frutas y, en el caso del denominado vampiro común, sangre de mamíferos.\n\n" +
+      "Los murciélagos rara vez atacan al hombre. En ocasiones son plagas, sobre todo cuando instalan sus sitios de residencia en los edificios y existen buenas razones para no tolerar su presencia.\n\n" +
+      "Los chillidos que emiten los murciélagos son molestos. Sus excretas y orina causan olores desagradables y persistentes, también pueden manchar paredes y techos, así como atraer a otros insectos y otras colonias de murciélagos, aún cuando la colonia original se haya fragmentado.\n\n" +
+      "Además existe el riesgo que alguien entre en contacto con un murciélago rabioso, aunque la mayoría no lo están pero no hay manera de saberlo por su simple apariencia. La acumulación de las excretas de murciélagos en áticos o en el suelo, crea un ambiente favorable para producir la enfermedad pulmonar conocida como Histoplasmosis en gente, gatos, perros y otros animales.\n\n" +
+      "Para evitar cualquier inconveniente, debería avisar a una empresa y/o profesional habilitado para que lo ayude con este tema.\n\n" +
+      "En caso de mordedura se debe concurrir inmediata y preferiblemente al hospital más cercano o a algún centro especializado en el tratamiento antirrábico, para que el personal médico tome la decisión que corresponda.",
     symptoms: [
-      "Olores por excrementos",
+      "Olores desagradables por excretas y orina",
+      "Manchas en paredes y techos",
       "Riesgo de histoplasmosis y posible rabia",
     ],
     treatment:
-      "Aplicación de repelente, limpieza de excrementos, cierre de accesos con burletes y flejes.",
+      "Evite el contacto directo. Solicite asistencia profesional habilitada para el manejo y control de murciélagos. En caso de mordedura, acuda inmediatamente al hospital o centro antirrábico más cercano.",
     prevention:
-      "Colocar mosquiteros, burletes de goma, evitar contacto directo, solicitar asistencia profesional.",
+      "Colocar telas de mosquiteros y burletes de aluminio con pestaña de goma en posibles puntos de entrada. Mantener cerrados los accesos a áticos y huecos. Ante la presencia de murciélagos, no manipularlos y contactar a profesionales.",
   },
 };
