@@ -16,7 +16,7 @@ export const AboutUsComponent = () => {
                 </Link>
             </div>
 
-            <div className="">
+            <div className="hidden md:block">
                 <Image
                     src={logo}
                     alt="Logo"
