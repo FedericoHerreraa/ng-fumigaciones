@@ -41,15 +41,14 @@ export default async function DetailPage({
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50/30 to-slate-50">
       <div className="relative  text-white overflow-hidden">
-         <Image
-            src={bannerTitulos}
-            alt="Banner"
-            fill
-            className="object-cover object-center absolute inset-0 z-0"
-            priority
-          />
+        <Image
+          src={bannerTitulos}
+          alt="Banner"
+          fill
+          className="object-cover object-center absolute inset-0 z-0"
+          priority
+        />
         <div className="relative z-10 container mx-auto px-6 py-16 overflow-hidden">
-          
           <div className="relative z-10">
             <Link
               href="/#services"
@@ -76,7 +75,6 @@ export default async function DetailPage({
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="container mx-auto px-6 py-16">
@@ -91,9 +89,20 @@ export default async function DetailPage({
                   Información General
                 </h2>
               </div>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                {info.description}
-              </p>
+              <div>
+                {info.description.split("\n\n").map((parrafo, idx) => (
+                  <p
+                    key={idx}
+                    className="mb-4 text-gray-600 leading-relaxed text-lg"
+                    dangerouslySetInnerHTML={{
+                      __html: parrafo.replace(
+                        /(Cucaracha alemana|Cucaracha americana|Cucaracha oriental|NG Desinfecciones)/g,
+                        "<b>$1</b>"
+                      ),
+                    }}
+                  />
+                ))}
+              </div>
             </div>
 
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100 hover:shadow-2xl transition-all duration-300">
@@ -284,13 +293,18 @@ const serviceDetails = {
   cucarachas: {
     name: "Cucarachas",
     description:
-      "Plaga urbana resistente que habita en zonas oscuras y húmedas. Existen 3 principales especies: oriental, americana y alemana.",
+      "Las cucarachas son una de las plagas más difíciles de erradicar y que mejor resistencia tienen para vivir en condiciones adversas, sin agua y sin alimentos durante largos periodos de tiempo. Los espacios favoritos para que estos se escondan sean los rincones oscuros, cálidos y húmedos (como alacenas y bajos mesadas, cámaras cloacales etc.). \n\n" +
+      "La familia total de cucarachas abarca más de 4.500 especies, pero son tres de ellas las que realmente constituyen las plagas urbanas: \n\n" +
+      "Cucaracha oriental: Es la cucaracha negra o común y puede llegar a medir 3.5 centímetros de largo. El macho tiene unas alas cortas aunque no vuela, y la hembra carece de ellas. \n\n  " +
+      "Cucaracha americana: Procede de África y es de color cobrizo, sus medidas pueden llegar a alcanzar los 4.5 centímetros de largo. En este caso, tanto macho como hembra poseen alas, pero solo el primero puede volar.\n\n  " +
+      "Cucaracha alemana: Es la más pequeña ya que no supera el centímetro y medio de largo y las que mejor se adapta a convivir con el ser humano. Su color es amarillento, se instalan en grietas de madera, alacenas, bajo mesadas, aparatos eléctricos,  debajo de los azulejos. \n\n  " +
+      "Como ya hemos mencionado, las cucarachas son una plaga de difícil erradicación, para esa tarea confiá en los mejores profesionales de NG Desinfecciones.",
     symptoms: [
       "Contaminación de alimentos",
       "Problemas respiratorios y alergias",
     ],
     treatment:
-      "Desinsectación con rociado de piretrinas sintéticas, aplicación de geles insecticidas en zonas críticas.",
+      "Realizamos la desinsectación integral mediante rociado con pulverizadores mecánicos y productos de baja toxicidad, autorizados por el Ministerio de Salud. Estos productos tienen amplio espectro, alto poder residual y son seguros para personas y mascotas. También aplicamos geles insecticidas en zonas sensibles, ideales para ambientes con personas alérgicas o donde no se pueden vaciar alacenas. Recomendamos el servicio mensual para mantener el control y evitar reinfestaciones.",
     prevention:
       "Servicio mensual de control. Mantener higiene, sellar grietas y vaciar alacenas en zonas infestadas.",
   },
