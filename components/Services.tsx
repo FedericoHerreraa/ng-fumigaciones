@@ -46,7 +46,7 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="w-full border-y-2 border-y-zinc-400/50 border-dashed p-8 min-h-[500px] flex flex-col items-center justify-center">
+      <div className="w-full bg-white/70 border-y-2 border-y-zinc-400/20 border-dashed p-8 min-h-[500px] flex flex-col items-center justify-center">
         <div className={`flex flex-col md:flex-row justify-center items-center ${selectedTab === "insectos" ? "gap-18" : "gap-30"}`}>
           {(selectedTab === "insectos" ? insectos : plagasUrbanas).map((item) => {
             const cardContent = (

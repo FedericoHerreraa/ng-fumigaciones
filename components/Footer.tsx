@@ -13,9 +13,8 @@ import logo from "@/images/logo.png";
 export const Footer = () => {
   return (
     <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-        {/* Logo y descripción */}
-        <div className="flex flex-col items-center md:items-start gap-4">
+      <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
+        <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
             src={logo}
             alt="Logo NG Fumigaciones"
@@ -28,8 +27,8 @@ export const Footer = () => {
             para hogares y empresas.
           </p>
         </div>
-        {/* Enlaces rápidos */}
-        <div className="flex flex-col gap-2">
+
+        <div className="flex flex-col text-left gap-2 md:w-1/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">Enlaces</h4>
           <Link href="/" className="hover:text-green-300 transition-colors">
             Inicio
@@ -53,8 +52,8 @@ export const Footer = () => {
             Contáctanos
           </Link>
         </div>
-        {/* Contacto */}
-        <div className="flex flex-col gap-2">
+
+        <div className="flex flex-col gap-2 md:w-3/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">
             Contacto
           </h4>
@@ -70,11 +69,10 @@ export const Footer = () => {
             <FaEnvelope className="text-green-300" />
             <span>info@ngfumigaciones.com</span>
           </div>
-          <div className="mt-4 rounded-lg overflow-hidden border border-green-900/30">
+          <div className="mt-4 rounded-md overflow-hidden w-full">
             <iframe
               title="Ubicación NG Desinfecciones"
               src="https://www.google.com/maps?q=Av.+Del+Campo+1290,+CABA&output=embed"
-              width="250"
               height="120"
               style={{ border: 0 }}
               allowFullScreen={false}
@@ -83,8 +81,8 @@ export const Footer = () => {
             ></iframe>
           </div>
         </div>
-        {/* Redes sociales */}
-        <div className="flex flex-col gap-2 items-center md:items-end">
+
+        <div className="flex flex-col gap-2 items-center md:items-end md:w-1/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">
             Seguinos
           </h4>
