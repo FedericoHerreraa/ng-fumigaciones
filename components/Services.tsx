@@ -18,20 +18,20 @@ export const Services = () => {
 
   return (
     <div id="services" className="min-h-[70vh] py-20 flex flex-col items-center bg-gradient-to-br from-green-50/50 to-green-100">
-      <p className="text-zinc-400 tracking-widest uppercase font-semibold mb-2">
+      <p className="text-zinc-400 tracking-widest uppercase md:text-base text-sm font-semibold mb-2">
         Servicios
       </p>
-      <h1 className="text-4xl md:text-5xl font-serif mb-10 text-zinc-900 drop-shadow-lg text-center">
+      <h1 className="text-3xl md:text-5xl font-serif mb-10 text-zinc-900 drop-shadow-lg text-center">
         Conoce nuestros servicios
       </h1>
 
-      <div className="w-full max-w-4xl flex justify-center mb-10">
+      <div className="md:w-full w-[95%] mx-auto max-w-4xl flex justify-center mb-10">
         <div className="inline-flex rounded-full shadow-lg overflow-hidden bg-white">
           {["insectos", "plagaUrbana"].map((tab) => (
             <button
               key={tab}
               onClick={() => setSelectedTab(tab)}
-              className={`px-8 py-4 text-lg font-medium transition-all duration-200 w-100
+              className={`md:px-8 px-3 md:py-4 py-2 md:text-lg font-medium transition-all duration-200 w-100
                 ${
                   selectedTab === tab
                     ? "bg-[#579e65] text-white shadow-inner"
@@ -46,7 +46,7 @@ export const Services = () => {
         </div>
       </div>
 
-      <div className="w-full border-y-2 border-y-zinc-400/50 border-dashed p-8 min-h-[500px] flex flex-col items-center justify-center">
+      <div className="w-full bg-white/70 border-y-2 border-y-zinc-400/20 border-dashed p-8 min-h-[500px] flex flex-col items-center justify-center">
         <div className={`flex flex-col md:flex-row justify-center items-center ${selectedTab === "insectos" ? "gap-18" : "gap-30"}`}>
           {(selectedTab === "insectos" ? insectos : plagasUrbanas).map((item) => {
             const cardContent = (
@@ -121,7 +121,7 @@ const plagasUrbanas = [
     image: Roedores,
   },
   {
-    name: "Murciélagos",
+    name: "Murcielagos",
     image: Murcielagos,
   },
 ];

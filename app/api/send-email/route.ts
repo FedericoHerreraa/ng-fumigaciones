@@ -294,19 +294,19 @@ export async function POST(req: Request) {
         //     message
         // )
 
-        // Email sent to client
+        // Email sent to us
         await resend.emails.send({
-            from: 'elegir@gmail.com',
-            to: email,
+            from: email,
+            to: 'info@ngdesinfecciones.com.ar',
             subject: subject,
             html: emailClientMessage
         })
 
-        // Email sent to us
+        // Email sent to the client
         // await resend.emails.send({
-        //     from: 'contact@asneedsolutions.com',
-        //     to: 'asneedsolutions@gmail.com',
-        //     subject: lenguage === 'en' ? 'New meeting arranged' : 'Nuevo cita reservada',
+        //     from: 'info@ngdesinfecciones.com.ar',
+        //     to: email,
+        //     subject: 'Solicitud de contacto recibida',
         //     html: emailUsMessage
         // })
 

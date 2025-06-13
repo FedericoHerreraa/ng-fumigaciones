@@ -13,9 +13,8 @@ import logo from "@/images/logo.png";
 export const Footer = () => {
   return (
     <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-        {/* Logo y descripción */}
-        <div className="flex flex-col items-center md:items-start gap-4">
+      <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
+        <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
             src={logo}
             alt="Logo NG Fumigaciones"
@@ -23,13 +22,12 @@ export const Footer = () => {
             height={160}
             className="object-contain"
           />
-          <p className="text-sm text-gray-200 max-w-xs text-center md:text-left">
+          <p className="text-sm text-green-100 max-w-xs text-center md:text-left">
             NG Desinfecciones - Soluciones profesionales en control de plagas
             para hogares y empresas.
           </p>
         </div>
-        {/* Enlaces rápidos */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col text-left gap-2 md:w-1/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">Enlaces</h4>
           <Link href="/" className="hover:text-green-300 transition-colors">
             Inicio
@@ -53,8 +51,8 @@ export const Footer = () => {
             Contáctanos
           </Link>
         </div>
-        {/* Contacto */}
-        <div className="flex flex-col gap-2">
+
+        <div className="flex flex-col gap-2 md:w-3/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">
             Contacto
           </h4>
@@ -70,11 +68,10 @@ export const Footer = () => {
             <FaEnvelope className="text-green-300" />
             <span>info@ngfumigaciones.com</span>
           </div>
-          <div className="mt-4 rounded-lg overflow-hidden border border-green-900/30">
+          <div className="mt-4 rounded-md overflow-hidden w-full">
             <iframe
               title="Ubicación NG Desinfecciones"
               src="https://www.google.com/maps?q=Av.+Del+Campo+1290,+CABA&output=embed"
-              width="250"
               height="120"
               style={{ border: 0 }}
               allowFullScreen={false}
@@ -83,8 +80,7 @@ export const Footer = () => {
             ></iframe>
           </div>
         </div>
-        {/* Redes sociales */}
-        <div className="flex flex-col gap-2 items-center md:items-end">
+        <div className="flex flex-col gap-2 items-center md:items-end md:w-1/8 w-full">
           <h4 className="font-semibold text-lg mb-2 text-green-100">
             Seguinos
           </h4>
@@ -116,9 +112,22 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-green-900/30 pt-4 text-center text-xs text-gray-300">
-        © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
-        reservados.
+      {/* Derechos reservados y marca de agua juntos */}
+      <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-green-100 font-medium">
+        <span>
+          © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
+          reservados.
+        </span>
+        <span className="hidden md:inline mx-2 text-green-300">|</span>
+        <a
+          href="https://www.asneedsolutions.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-gradient-to-r from-green-700 via-green-800 to-green-700 px-3 py-1 rounded-full shadow-md font-light hover:scale-105 transition-transform"
+        >
+          Desarrollado por{" "}
+          <span className="text-green-200 font-bold">AsNeed Solutions</span>
+        </a>
       </div>
     </footer>
   );
