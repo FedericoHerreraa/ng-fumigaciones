@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { MobileViewProvider } from "@/context/MobileViewContext";
+import { WhatsappQuickAccess } from "@/components/WhatsappQuickAccess";
 
 export const metadata: Metadata = {
   title: "NG Desinfecciones | Inicio",
@@ -12,9 +14,12 @@ export default function RootLayout({ children }: Readonly<{children: React.React
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <MobileViewProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsappQuickAccess />
+        </MobileViewProvider>
       </body>
     </html>
   );
