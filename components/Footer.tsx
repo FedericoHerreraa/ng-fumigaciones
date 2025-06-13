@@ -12,7 +12,7 @@ import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
+    <footer className="bg-[#2e6e34] text-white pt-10 mt-20 ">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         {/* Logo y descripción */}
         <div className="flex flex-col items-center md:items-start gap-4">
@@ -116,9 +116,22 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-green-900/30 pt-4 text-center text-xs text-gray-300">
-        © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
-        reservados.
+      {/* Derechos reservados y marca de agua juntos */}
+      <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-gray-200 font-medium">
+        <span>
+          © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
+          reservados.
+        </span>
+        <span className="hidden md:inline mx-2 text-green-900">|</span>
+        <a
+          href="https://www.asneedsolutions.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-gradient-to-r from-green-600 via-green-700 to-green-600 px-3 py-1 rounded-full shadow-md font-light hover:scale-105 transition-transform"
+        >
+          Desarrollado por{" "}
+          <span className="text-green-300 font-bold">AsNeed Solutions</span>
+        </a>
       </div>
     </footer>
   );
