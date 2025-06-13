@@ -12,7 +12,7 @@ import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2e6e34] text-white pt-10 mt-20 ">
+    <footer className="bg-gradient-to-br from-[#35543c] via-[#4a6b4d] to-[#35543c] text-white pt-10 mt-20">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         {/* Logo y descripción */}
         <div className="flex flex-col items-center md:items-start gap-4">
@@ -23,14 +23,14 @@ export const Footer = () => {
             height={160}
             className="object-contain"
           />
-          <p className="text-sm text-gray-200 max-w-xs text-center md:text-left">
+          <p className="text-sm text-green-100 max-w-xs text-center md:text-left">
             NG Desinfecciones - Soluciones profesionales en control de plagas
             para hogares y empresas.
           </p>
         </div>
         {/* Enlaces rápidos */}
         <div className="flex flex-col gap-2">
-          <h4 className="font-semibold text-lg mb-2 text-green-100">Enlaces</h4>
+          <h4 className="font-semibold text-lg mb-2 text-green-200">Enlaces</h4>
           <Link href="/" className="hover:text-green-300 transition-colors">
             Inicio
           </Link>
@@ -55,7 +55,7 @@ export const Footer = () => {
         </div>
         {/* Contacto */}
         <div className="flex flex-col gap-2">
-          <h4 className="font-semibold text-lg mb-2 text-green-100">
+          <h4 className="font-semibold text-lg mb-2 text-green-200">
             Contacto
           </h4>
           <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export const Footer = () => {
         </div>
         {/* Redes sociales */}
         <div className="flex flex-col gap-2 items-center md:items-end">
-          <h4 className="font-semibold text-lg mb-2 text-green-100">
+          <h4 className="font-semibold text-lg mb-2 text-green-200">
             Seguinos
           </h4>
           <div className="flex gap-4">
@@ -117,20 +117,20 @@ export const Footer = () => {
         </div>
       </div>
       {/* Derechos reservados y marca de agua juntos */}
-      <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-gray-200 font-medium">
+      <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-green-100 font-medium">
         <span>
           © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
           reservados.
         </span>
-        <span className="hidden md:inline mx-2 text-green-900">|</span>
+        <span className="hidden md:inline mx-2 text-green-300">|</span>
         <a
           href="https://www.asneedsolutions.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white bg-gradient-to-r from-green-600 via-green-700 to-green-600 px-3 py-1 rounded-full shadow-md font-light hover:scale-105 transition-transform"
+          className="text-white bg-gradient-to-r from-green-700 via-green-800 to-green-700 px-3 py-1 rounded-full shadow-md font-light hover:scale-105 transition-transform"
         >
           Desarrollado por{" "}
-          <span className="text-green-300 font-bold">AsNeed Solutions</span>
+          <span className="text-green-200 font-bold">AsNeed Solutions</span>
         </a>
       </div>
     </footer>
