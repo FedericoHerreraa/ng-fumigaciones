@@ -121,7 +121,7 @@ const plagasUrbanas = [
     image: Roedores,
   },
   {
-    name: "Murciélagos",
+    name: "Murcielagos",
     image: Murcielagos,
   },
 ];
