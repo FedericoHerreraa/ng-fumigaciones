@@ -2,7 +2,7 @@
 
 import { ContactUsView } from "./ContactUsView"
 import { useState } from "react"
-
+import { toast } from "sonner"
 
 export const ContactUsController = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -31,7 +31,7 @@ export const ContactUsController = () => {
 
     const sendEmail = async () => {
         if (!validateForm()) {
-            alert('Por favor, complete todos los campos')
+            toast.error('Por favor, complete todos los campos')
             return
         }
         
@@ -40,7 +40,11 @@ export const ContactUsController = () => {
             method: 'POST',
             body: JSON.stringify(formState)
         })
-        console.log(response)
+        if (response.ok) {
+            toast.success('Email enviado correctamente')
+        } else {
+            toast.error('Error al enviar el email')
+        }
         cleanForm()
         setIsLoading(false)
     }

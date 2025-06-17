@@ -12,7 +12,7 @@ import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2e6e34]/90 text-white pt-10 pb-4 mt-20 ">
+    <footer className="bg-[#4a6b4d] text-white pt-10 pb-4 mt-20 ">
       <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
