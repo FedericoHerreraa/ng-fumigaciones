@@ -12,7 +12,7 @@ import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#2e6e34] text-white pt-10 pb-4 mt-20 ">
+    <footer className="bg-[#2e6e34]/90 text-white pt-10 pb-4 mt-20 ">
       <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
@@ -112,7 +112,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Derechos reservados y marca de agua juntos */}
       <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-green-100 font-medium">
         <span>
           © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos

@@ -1,7 +1,8 @@
 import { Values } from "@/components/Values";
 import type { Metadata } from "next";
 import Image from "next/image";
-import saludImg from "@/images/salud.png"; // Cambia por la ruta real de tu imagen
+import saludImg from "@/images/salud.png";
+import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "NG Desinfecciones | Sobre Nosotros",
@@ -10,12 +11,8 @@ export const metadata: Metadata = {
 
 export default function AboutUs() {
   return (
-    <div className="">
-      
-
-      {/* Sección Salud con imagen y fondo blanco diagonal */}
+    <div>
       <section className="w-full relative min-h-[420px] bg-white  flex items-stretch shadow-lg overflow-hidden">
-        {/* Imagen de fondo izquierda */}
         <div className="hidden md:block absolute inset-0 w-1/2 h-full z-0">
           <Image
             src={saludImg}
@@ -26,7 +23,6 @@ export default function AboutUs() {
             priority
           />
         </div>
-        {/* Fondo blanco diagonal para el texto */}
         <div className="relative z-10 w-full md:w-1/2 ml-auto flex items-center">
           <div className="bg-white/95  rounded-xl p-8 md:p-12 mx-4 md:mx-8 my-8 md:my-16">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-green-900 mb-4 text-center">
@@ -52,6 +48,7 @@ export default function AboutUs() {
       </section>
 
       <Values />
+      <CTA />
     </div>
   );
 }
