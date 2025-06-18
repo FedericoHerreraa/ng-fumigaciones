@@ -62,11 +62,11 @@ export const Footer = () => {
           </div>
           <div className="flex items-center gap-2">
             <FaPhone className="text-green-300" />
-            <span>4552-1746</span>
+            <span>+54 9 11 2349-7999</span>
           </div>
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-green-300" />
-            <span>info@ngfumigaciones.com</span>
+            <span>info@ngdesinfecciones.com.ar</span>
           </div>
           <div className="mt-4 rounded-md overflow-hidden w-full">
             <iframe
