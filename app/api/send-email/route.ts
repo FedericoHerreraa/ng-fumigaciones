@@ -22,10 +22,10 @@ function generateMessage(
                 body {
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     line-height: 1.6;
-                    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                    background: #ffffff;
                     margin: 0;
                     padding: 20px;
-                    color: #334155;
+                    color: #1a1a1a;
                 }
                 .container {
                     max-width: 650px;
@@ -34,10 +34,10 @@ function generateMessage(
                     border-radius: 20px;
                     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
                     overflow: hidden;
-                    border: 1px solid rgba(74, 107, 77, 0.1);
+                    border: 1px solid #e5e5e5;
                 }
                 .header {
-                    background: linear-gradient(135deg, #2c5530 0%, #4a6b4d 100%);
+                    background: #2c5530;
                     color: #ffffff;
                     padding: 40px 30px;
                     text-align: center;
@@ -51,32 +51,18 @@ function generateMessage(
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+                    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 0%, transparent 70%);
                 }
                 .header-content {
                     position: relative;
                     z-index: 2;
-                }
-                .logo-placeholder {
-                    width: 80px;
-                    height: 80px;
-                    background: white;
-                    border-radius: 50%;
-                    margin: 0 auto 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #4a6b4d;
                 }
                 .header h1 {
                     margin: 0;
                     font-size: 28px;
                     font-weight: 700;
                     margin-bottom: 8px;
-                    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
                 }
                 .header .subtitle {
                     font-size: 16px;
@@ -86,20 +72,20 @@ function generateMessage(
                 }
                 .content {
                     padding: 40px 30px;
-                    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+                    background: #ffffff;
                 }
                 .welcome-message {
-                    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-                    border-left: 5px solid #4a6b4d;
+                    background: #f0f9ff;
+                    border-left: 5px solid #2c5530;
                     padding: 20px 25px;
                     margin-bottom: 30px;
                     border-radius: 0 12px 12px 0;
-                    box-shadow: 0 4px 12px rgba(74, 107, 77, 0.1);
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 }
                 .welcome-message p {
                     margin: 0;
                     font-size: 16px;
-                    color: #1e293b;
+                    color: #1a1a1a;
                     font-weight: 500;
                 }
                 .info-section {
@@ -107,7 +93,7 @@ function generateMessage(
                     border-radius: 16px;
                     padding: 25px;
                     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-                    border: 1px solid #e2e8f0;
+                    border: 1px solid #e5e5e5;
                 }
                 .info-title {
                     font-size: 18px;
@@ -116,14 +102,14 @@ function generateMessage(
                     margin-bottom: 20px;
                     text-align: center;
                     padding-bottom: 10px;
-                    border-bottom: 2px solid #e2e8f0;
+                    border-bottom: 2px solid #e5e5e5;
                 }
                 .info-item {
                     display: flex;
                     align-items: flex-start;
                     margin-bottom: 16px;
                     padding: 12px 0;
-                    border-bottom: 1px solid #f1f5f9;
+                    border-bottom: 1px solid #e5e5e5;
                 }
                 .info-item:last-child {
                     border-bottom: none;
@@ -131,7 +117,7 @@ function generateMessage(
                 }
                 .info-label {
                     font-weight: 600;
-                    color: #4a6b4d;
+                    color: #2c5530;
                     width: 80px;
                     flex-shrink: 0;
                     font-size: 14px;
@@ -139,7 +125,7 @@ function generateMessage(
                     letter-spacing: 0.5px;
                 }
                 .info-value {
-                    color: #334155;
+                    color: #1a1a1a;
                     font-size: 15px;
                     line-height: 1.5;
                     word-break: break-word;
@@ -148,12 +134,13 @@ function generateMessage(
                     background: #f8fafc;
                     padding: 16px;
                     border-radius: 8px;
-                    border-left: 3px solid #4a6b4d;
+                    border-left: 3px solid #2c5530;
                     font-style: italic;
+                    color: #1a1a1a;
                 }
                 .footer {
-                    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-                    color: #cbd5e1;
+                    background: #1a1a1a;
+                    color: #ffffff;
                     text-align: center;
                     padding: 30px;
                     position: relative;
@@ -169,24 +156,25 @@ function generateMessage(
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: radial-gradient(circle at 50% 0%, rgba(74, 107, 77, 0.1) 0%, transparent 70%);
+                    background: radial-gradient(circle at 50% 0%, rgba(44, 85, 48, 0.2) 0%, transparent 70%);
                 }
                 .contact-info {
                     margin-bottom: 15px;
                     font-size: 14px;
                 }
                 .contact-info strong {
-                    color: #a7f3d0;
+                    color: #ffffff;
                     font-weight: 600;
                 }
                 .footer-note {
                     font-size: 12px;
                     opacity: 0.8;
                     line-height: 1.4;
+                    color: #ffffff;
                 }
                 .divider {
                     height: 1px;
-                    background: linear-gradient(90deg, transparent, #4a6b4d, transparent);
+                    background: linear-gradient(90deg, transparent, #2c5530, transparent);
                     margin: 20px 0;
                 }
                 @media (max-width: 600px) {
@@ -203,7 +191,6 @@ function generateMessage(
             <div class="container">
                 <div class="header">
                     <div class="header-content">
-                        <div class="logo-placeholder">🏠</div>
                         <h1>Solicitud Recibida</h1>
                         <p class="subtitle">Servicios Profesionales de Fumigación</p>
                     </div>
@@ -242,7 +229,7 @@ function generateMessage(
                     
                     <div class="divider"></div>
                     
-                    <div style="text-align: center; color: #64748b; font-size: 14px;">
+                    <div style="text-align: center; color: #1a1a1a; font-size: 14px;">
                         <p><strong>Próximos pasos:</strong></p>
                         <p>• Revisaremos tu solicitud en detalle<br>
                         • Te contactaremos en las próximas 24 horas<br>
@@ -280,35 +267,35 @@ export async function POST(req: Request) {
             });
         }
 
-        const emailClientMessage = generateMessage(
-            name, 
-            email,
-            subject,
-            message
-        )
-
-        // const emailUsMessage = generateMessage(
+        // const emailClientMessage = generateMessage(
         //     name, 
         //     email,
         //     subject,
         //     message
         // )
 
+        const emailUsMessage = generateMessage(
+            name, 
+            email,
+            subject,
+            message
+        )
+
         // Email sent to us
-        await resend.emails.send({
-            from: email,
-            to: 'info@ngdesinfecciones.com.ar',
-            subject: subject,
-            html: emailClientMessage
-        })
+        // await resend.emails.send({
+        //     from: email,
+        //     to: 'info@ngdesinfecciones.com.ar',
+        //     subject: subject,
+        //     html: emailClientMessage
+        // })
 
         // Email sent to the client
-        // await resend.emails.send({
-        //     from: 'info@ngdesinfecciones.com.ar',
-        //     to: email,
-        //     subject: 'Solicitud de contacto recibida',
-        //     html: emailUsMessage
-        // })
+        await resend.emails.send({
+            from: 'contacto@ngdesinfecciones.com.ar',
+            to: email,
+            subject: 'Solicitud de contacto recibida',
+            html: emailUsMessage
+        })
 
         return NextResponse.json({ message: "Correo enviado exitosamente", status: 200 })
     } catch (error) {

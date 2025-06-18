@@ -1,6 +1,6 @@
-
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { CgSpinner } from "react-icons/cg"
 
 export const ContactUsView = ({
     formState,
@@ -86,15 +86,15 @@ export const ContactUsView = ({
                     <div className="flex items-center gap-5">
                         <button
                             onClick={sendEmail} 
-                            className="bg-[#596b58] border border-[#596b58] text-white px-6 py-2 rounded-md mt-5 hover:bg-[#4a5e4c] transition-all duration-200 cursor-pointer"
+                            className="bg-[#596b58] border border-[#596b58] text-white px-6 py-2 h-11 w-32 whitespace-nowrap rounded-md mt-5 hover:bg-[#4a5e4c] transition-all duration-200 cursor-pointer flex items-center justify-center"
                         >
-                            {isLoading ? 'Enviando...' : 'Enviar email'}
+                            {isLoading ? <CgSpinner className="animate-spin" /> : 'Enviar email'}
                         </button>
                         <button
                             onClick={sendWhatsApp} 
                             className="border border-green-500 text-black px-6 py-2 rounded-md mt-5 hover:bg-green-500/10 cursor-pointer transition-all duration-200"
                         >
-                            {isLoading ? 'Enviando...' : 'WhatsApp'}
+                            WhatsApp
                         </button>
                     </div>
                 </div>

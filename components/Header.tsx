@@ -87,7 +87,7 @@ export const Header = () => {
                                 <FaPhone size={18} className='text-white' />
                             </div>
                             <div className="flex flex-col">
-                                <p className="font-semibold text-lg text-gray-700">4552-1746</p>
+                                <p className="font-semibold text-lg text-gray-700">+54 9 11 2349-7999</p>
                                 <p className="text-sm text-gray-500 font-medium">Línea directa</p>
                             </div>
                         </div>

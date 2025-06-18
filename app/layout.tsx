@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileViewProvider } from "@/context/MobileViewContext";
 import { WhatsappQuickAccess } from "@/components/WhatsappQuickAccess";
+import { Toaster } from "@/components/ui/sonner"
 
 export const metadata: Metadata = {
   title: "NG Desinfecciones | Inicio",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: Readonly<{children: React.React
           {children}
           <Footer />
           <WhatsappQuickAccess />
+          <Toaster />
         </MobileViewProvider>
       </body>
     </html>

@@ -182,14 +182,14 @@ export default async function DetailPage({
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <FaPhone size={16} />
-                      <span className="font-semibold">4552-1746</span>
+                      <span className="font-semibold">+54 9 11 2349-7999</span>
                     </div>
                     <div className="text-sm text-green-800">
                       📍 Av. Del Campo 1290, Capital Federal.
                     </div>
                   </div>
                   <button className="w-full mt-6 bg-white text-green-700 font-bold py-3 px-6 rounded-xl hover:bg-green-50 transition-all duration-300 hover:scale-105 shadow-lg">
-                    Solicitar Presupuesto
+                    <Link href="/contact-us">Solicitar Presupuesto</Link>
                   </button>
                 </div>
               </div>
