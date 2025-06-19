@@ -7,7 +7,8 @@ function generateMessage(
     name: string,
     email: string,
     subject: string,
-    message: string
+    message: string,
+    client: boolean
 ) {
     return `
         <!DOCTYPE html>
@@ -192,17 +193,17 @@ function generateMessage(
                 <div class="header">
                     <div class="header-content">
                         <h1>Solicitud Recibida</h1>
-                        <p class="subtitle">Servicios Profesionales de Fumigación</p>
+                        <p class="subtitle">Servicios Profesionales de Desinfección</p>
                     </div>
                 </div>
                 
                 <div class="content">
                     <div class="welcome-message">
-                        <p>¡Gracias por contactarnos! Hemos recibido tu solicitud y nuestro equipo especializado se pondrá en contacto contigo a la brevedad para coordinar el servicio.</p>
+                        <p>${client ? "¡Gracias por contactarnos! Hemos recibido tu solicitud y nuestro equipo especializado se pondrá en contacto contigo a la brevedad para coordinar el servicio." : "Se ha recibido una solicitud de contacto de un cliente desde la pagina web de NG Desinfecciones."}</p>
                     </div>
                     
                     <div class="info-section">
-                        <div class="info-title">Detalles de tu Solicitud</div>
+                        <div class="info-title">${client ? "Detalles de tu Solicitud" : "Detalles de la Solicitud"}</div>
                         
                         <div class="info-item">
                             <div class="info-label">Nombre:</div>
@@ -229,12 +230,13 @@ function generateMessage(
                     
                     <div class="divider"></div>
                     
-                    <div style="text-align: center; color: #1a1a1a; font-size: 14px;">
-                        <p><strong>Próximos pasos:</strong></p>
-                        <p>• Revisaremos tu solicitud en detalle<br>
-                        • Te contactaremos en las próximas 24 horas<br>
-                        • Coordinaremos una inspección inicial sin costo</p>
-                    </div>
+                    ${client ? `
+                        <div style="text-align: center; color: #1a1a1a; font-size: 14px;">
+                            <p><strong>Próximos pasos:</strong></p>
+                            <p>• Revisaremos tu solicitud en detalle<br>
+                            • Te contactaremos lo antes posible<br>
+                        </div>
+                    ` : ""}
                 </div>
                 
                 <div class="footer">
@@ -267,34 +269,36 @@ export async function POST(req: Request) {
             });
         }
 
-        // const emailClientMessage = generateMessage(
-        //     name, 
-        //     email,
-        //     subject,
-        //     message
-        // )
-
         const emailUsMessage = generateMessage(
             name, 
             email,
             subject,
-            message
+            message,
+            false
+        )
+
+        const emailClientMessage = generateMessage(
+            name, 
+            email,
+            subject,
+            message,
+            true
         )
 
         // Email sent to us
-        // await resend.emails.send({
-        //     from: email,
-        //     to: 'info@ngdesinfecciones.com.ar',
-        //     subject: subject,
-        //     html: emailClientMessage
-        // })
+        await resend.emails.send({
+            from: 'contacto@ngdesinfecciones.com.ar',
+            to: 'info@ngdesinfecciones.com.ar',
+            subject: subject,
+            html: emailUsMessage
+        })
 
         // Email sent to the client
         await resend.emails.send({
             from: 'contacto@ngdesinfecciones.com.ar',
             to: email,
             subject: 'Solicitud de contacto recibida',
-            html: emailUsMessage
+            html: emailClientMessage
         })
 
         return NextResponse.json({ message: "Correo enviado exitosamente", status: 200 })

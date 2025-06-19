@@ -26,19 +26,19 @@ export const ContactUsView = ({
     isLoading: boolean
 }) => {
     return (
-        <div className="w-[80%] my-20 mx-auto">
+        <div className="w-[90%] md:w-[80%] my-20 mx-auto">
             <p className="text-zinc-600 italic">Contactanos</p>
-            <h1 className="text-5xl">
+            <h1 className="md:text-5xl text-3xl">
                 <span className="bg-gradient-to-r from-black to-green-500 bg-clip-text text-transparent">
                     Dejanos tu pregunta acá
                 </span>
             </h1>
             
             <div className="mt-10">
-                <section className="bg-zinc-100/80 h-fit w-3/4 rounded-xl p-10">
+                <section className="bg-zinc-100/80 h-fit md:w-3/4 rounded-xl md:p-10 p-5">
                     <form className="flex flex-col gap-5">
-                        <div className="flex items-center gap-5 w-full">
-                            <div className="w-1/2">
+                        <div className="flex flex-col md:flex-row items-center gap-5 w-full">
+                            <div className="md:w-1/2 w-full">
                                 <label className="text-zinc-600 ml-2">Nombre completo</label>
                                 <Input 
                                     placeholder="Nombre" 
@@ -48,7 +48,7 @@ export const ContactUsView = ({
                                     value={formState.name}
                                 />
                             </div>
-                            <div className="w-1/2">
+                            <div className="md:w-1/2 w-full">
                                 <label className="text-zinc-600 ml-2">Dirección de correo</label>
                                 <Input 
                                     placeholder="Email" 
