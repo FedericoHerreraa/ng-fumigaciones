@@ -114,7 +114,7 @@ export const Footer = () => {
       </div>
       <div className="mt-8 border-y border-green-900/30 pt-4 pb-4 flex flex-col md:flex-row justify-center items-center gap-2 text-xs md:text-sm text-green-100 font-medium">
         <span>
-          © {new Date().getFullYear()} NG Fumigaciones. Todos los derechos
+          © {new Date().getFullYear()} NG Desinfecciones. Todos los derechos
           reservados.
         </span>
         <span className="hidden md:inline mx-2 text-green-300">|</span>
