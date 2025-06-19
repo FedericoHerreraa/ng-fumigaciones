@@ -5,7 +5,7 @@ import { FaBug, FaAward } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
 
 // Simple hook para detectar si el contador está en vista
-function useInView(ref: React.RefObject<HTMLElement>) {
+function useInView(ref: React.RefObject<Element | null>) {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -64,11 +64,11 @@ export const Results = () => {
           className="bg-white shadow-xl p-8 flex flex-col md:flex-row justify-around items-center gap-10 rounded-2xl"
           style={{
             borderImage: "linear-gradient(90deg, #1b5629, #01950d, #35543c) 1",
-            borderStyle: "solid"
+            borderStyle: "solid",
           }}
         >
           <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
-            <Counter plus to={80}/>
+            <Counter plus to={80} />
             <p className="md:text-lg text-green-900 flex items-center gap-2 font-semibold">
               <FaBug /> Plagas eliminadas
             </p>
