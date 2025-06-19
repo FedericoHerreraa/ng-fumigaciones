@@ -14,8 +14,8 @@ export const CTA = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between items-center md:w-[90%] w-[95%] gap-10 px-6 py-12 mx-auto md:h-[600px] min-h-[60vh]">
       <div className="md:max-w-lg space-y-5 ">
-        <span className="font-semibold italic text-zinc-400 md:text-base text-sm">Solicitá una cotización sin compromiso.</span>
-        <h2 className="md:text-3xl text-xl font-bold leading-snug font-serif">
+        <span className="font-semibold italic text-zinc-600 md:text-base text-sm">Solicitá una cotización sin compromiso.</span>
+        <h2 className="md:text-3xl text-xl font-bold leading-snug text-green-900">
           ¿Necesitás un servicio de desinfección confiable y profesional?
         </h2>
         <p className="md:text-lg leading-relaxed text-[#41413F]">Protegé tu hogar o negocio con nuestras soluciones efectivas y seguras.</p>
