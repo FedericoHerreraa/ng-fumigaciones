@@ -2,28 +2,61 @@ import backgroundImage from "@/images/fumigacion2.jpeg";
 
 export const Landing = () => {
   return (
-    <section
-      className="relative h-[calc(100vh-176px)] min-h-[400px] flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage.src})` }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-green-900/30 to-black/70 z-0 opacity-50" />
+    <section className="relative h-[calc(100vh-176px)] min-h-[400px] flex items-center md:pl-26 overflow-hidden">
+      {/* Fondo diagonal con fade */}
+      <div
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
+        style={{
+          background: `
+            linear-gradient(
+              120deg, 
+              rgba(58, 90, 64, 0.97) 55%, 
+              rgba(58, 90, 64, 0.7) 60%, 
+              rgba(58, 90, 64, 0.1) 70%, 
+              rgba(58, 90, 64, 0) 75%
+            ),
+            url(${backgroundImage.src}) right center / cover no-repeat
+          `,
+          maskImage: "linear-gradient(120deg, #000 60%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(120deg, #000 60%, transparent 100%)",
+        }}
+      />
 
-      <div className="relative z-10 flex flex-col items-center text-center gap-6 px-4 ">
-        <div className="bg-gradient-to-r from-[#73b170] via-[#4a6b4d] to-[#73b170]/80 px-10 py-6 rounded-2xl shadow-2xl backdrop-blur-sm animate-fade-in">
-          <h1 className="text-3xl md:text-6xl font-extrabold text-white font-serif drop-shadow-lg tracking-tight">
-            NG Desinfecciones
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 gap-0 md:gap-8">
+        <div className="flex-1 flex flex-col items-start md:justify-center text-left gap-8 md:pl-4">
+          <span className="uppercase tracking-widest text-green-200 font-semibold text-sm md:text-base mb-2">
+            Protección profesional
+          </span>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white font-sans drop-shadow-lg leading-tight">
+            Cuidamos tu espacio,
+            <br />
+            cuidamos tu salud
           </h1>
-          <p className="mt-4 text-base md:text-2xl text-green-100 font-medium drop-shadow">
-            Soluciones profesionales en control de plagas para hogares y
-            empresas.
+          <p className="text-green-100 text-lg md:text-2xl font-medium max-w-lg">
+            Expertos en control de plagas y desinfección ambiental para hogares,
+            empresas y consorcios.
+            <span className="block mt-2 text-green-200 text-base font-normal">
+              Servicio rápido, seguro y certificado.
+            </span>
           </p>
-          <a
-            href="#services"
-            className="inline-block mt-8 px-8 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-lg shadow-lg transition-all duration-200"
-          >
-            Ver servicios
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <a
+              href="#services"
+              className="px-8 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-lg shadow-lg transition-all duration-200"
+            >
+              Nuestros servicios
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-3 rounded-full border border-green-400 text-green-100 hover:bg-green-700 hover:text-white font-semibold text-lg shadow transition-all duration-200"
+            >
+              Solicitar presupuesto
+            </a>
+          </div>
         </div>
+        {/* Imagen solo visible en desktop, pero el fondo ya la incluye */}
+        <div className="hidden md:block flex-1" />
       </div>
     </section>
   );
