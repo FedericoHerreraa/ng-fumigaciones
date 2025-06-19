@@ -22,7 +22,7 @@ export const Services = () => {
       </h1>
 
       <div className="w-full bg-white/70 border-y-2 border-y-zinc-400/20 border-dashed p-8 min-h-[500px] flex flex-col gap-8 items-center justify-center">
-        <div className="flex gap-8 w-full flex-nowrap justify-center">
+        <div className="flex md:flex-row flex-col items-center gap-8 w-full justify-center">
           {services.slice(0, 4).map(item => (
             <Link
               href={`/detail/${item.name.toLowerCase()}`}
@@ -44,7 +44,7 @@ export const Services = () => {
             </Link>
           ))}
         </div>
-        <div className="flex gap-8 w-full flex-nowrap justify-center">
+        <div className="flex md:flex-row flex-col gap-8 w-full justify-center">
           {services.slice(4).map(item => (
             <Link
               href={`/detail/${item.name.toLowerCase()}`}

@@ -65,10 +65,10 @@ export default async function DetailPage({
                   <FaBug size={32} />
                 </div>
                 <div>
-                  <h1 className="text-5xl lg:text-6xl font-bold mb-2">
+                  <h1 className="text-4xl md:text-6xl font-bold mb-2">
                     {info.name}
                   </h1>
-                  <p className="text-green-100 text-xl font-light">
+                  <p className="text-green-100 md:text-xl font-light">
                     Control profesional especializado
                   </p>
                 </div>
@@ -78,15 +78,15 @@ export default async function DetailPage({
         </div>
       </div>
 
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto md:px-6 px-2 py-16">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-xl md:p-8 p-5 border border-green-100 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-green-100 rounded-full">
                   <FaInfoCircle className="text-green-600" size={20} />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
                   Información General
                 </h2>
               </div>
@@ -94,7 +94,7 @@ export default async function DetailPage({
                 {info.description.split("\n\n").map((parrafo, idx) => (
                   <p
                     key={idx}
-                    className="mb-4 text-gray-600 leading-relaxed text-lg"
+                    className="mb-4 text-gray-600 leading-relaxed md:text-lg"
                     dangerouslySetInnerHTML={{
                       __html: parrafo.replace(
                         /(Cucaracha alemana|Cucaracha americana|Cucaracha oriental|NG Desinfecciones)/g,
@@ -106,7 +106,7 @@ export default async function DetailPage({
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-orange-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-xl md:p-8 p-5 border border-orange-100 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-orange-100 rounded-full">
                   <FaExclamationTriangle
@@ -114,7 +114,7 @@ export default async function DetailPage({
                     size={20}
                   />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
                   Síntomas y Riesgos
                 </h2>
               </div>
@@ -134,31 +134,31 @@ export default async function DetailPage({
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-xl md:p-8 p-5 border border-blue-100 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-blue-100 rounded-full">
                   <FaMedkit className="text-blue-600" size={20} />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
                   Tratamiento Profesional
                 </h2>
               </div>
-              <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-400">
-                <p className="text-gray-700 leading-relaxed text-lg">
+              <div className="bg-blue-50 rounded-xl md:p-6 p-4 border-l-4 border-blue-400">
+                <p className="text-gray-700 leading-relaxed md:text-lg">
                   {info.treatment}
                 </p>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-xl md:p-8 p-5 border border-green-100 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-green-100 rounded-full">
                   <FaShieldAlt className="text-green-600" size={20} />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-800">Prevención</h2>
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">Prevención</h2>
               </div>
-              <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-400">
-                <p className="text-gray-700 leading-relaxed text-lg">
+              <div className="bg-green-50 rounded-xl md:p-6 p-4 border-l-4 border-green-400">
+                <p className="text-gray-700 leading-relaxed md:text-lg">
                   {info.prevention}
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default async function DetailPage({
 
           <div className="lg:col-span-1">
             <div className="sticky top-8 space-y-6">
-              <div className="bg-zinc-200 text-green-800 rounded-2xl shadow-xl p-8 relative overflow-hidden">
+              <div className="bg-zinc-200 text-green-800 rounded-2xl shadow-xl md:p-8 p-5 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 mb-6">
@@ -194,7 +194,7 @@ export default async function DetailPage({
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+              <div className="bg-white rounded-2xl shadow-xl md:p-6 p-5 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
                   ¿Por qué elegirnos?
                 </h3>
