@@ -23,8 +23,8 @@ export const Landing = () => {
         }}
       />
 
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 gap-0 md:gap-8">
-        <div className="flex-1 flex flex-col items-start md:justify-center text-left gap-8 md:pl-4">
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 gap-0 md:gap-4">
+        <div className="flex-1 flex flex-col items-start md:justify-center text-left gap-4 md:pl-4">
           <span className="uppercase tracking-widest text-green-200 font-semibold text-sm md:text-base mb-2">
             Protección profesional
           </span>
