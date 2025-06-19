@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <>
       <Landing />
-      <CTA />
       <Results />
+      <CTA />
       <Services />
-      <FAQs />
       <AboutUsComponent />
+      <FAQs />
     </>
   );
 }
