@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export const AboutUsComponent = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto my-24 px-4 md:px-0 flex flex-col md:flex-row items-center gap-10">
+    <section className="w-full mx-auto py-24 px-14 md:px-20 flex flex-col md:flex-row items-center gap-10 bg-zinc-100">
       <div className="flex-1 flex flex-col items-start">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight text-green-900">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-green-900">
           Somos <span className="text-green-700">NG Desinfecciones</span>
         </h1>
-        <p className="text-green-900/80 text-lg md:text-xl mb-6 max-w-xl">
+        <p className="text-green-900/80 text-lg md:text-md mb-6 max-w-xl">
           Más de una década protegiendo hogares y empresas con soluciones
           profesionales en desinfección y control de plagas. Nuestro compromiso
           es tu tranquilidad y la de los tuyos.
