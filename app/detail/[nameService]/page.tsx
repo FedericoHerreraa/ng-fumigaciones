@@ -7,6 +7,7 @@ import {
   FaInfoCircle,
   FaPhone,
   FaCheckCircle,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
@@ -181,8 +182,12 @@ export default async function DetailPage({
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <FaPhone size={16} />
+                      <FaWhatsapp size={20} />
                       <span className="font-semibold">+54 9 11 2349-7999</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FaPhone size={16} />
+                      <span className="font-semibold">Tel. 4552-1746</span>
                     </div>
                     <div className="text-sm text-green-800">
                       📍 Av. Del Campo 1290, Capital Federal.
@@ -203,7 +208,7 @@ export default async function DetailPage({
                     "Experiencia profesional certificada",
                     "Productos seguros y efectivos",
                     "Garantía en todos nuestros servicios",
-                    "Atención personalizada 24/7",
+                    "Atención personalizada los 365 días del año",
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <FaCheckCircle

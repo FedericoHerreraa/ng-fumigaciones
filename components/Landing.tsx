@@ -1,9 +1,12 @@
-import backgroundImage from "@/images/fumigacion2.jpeg";
+"use client";
+
+import backgroundImage from "@/images/fumigacion.jpeg";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const Landing = () => {
   return (
     <section className="relative h-[calc(100vh-176px)] min-h-[400px] flex items-center md:pl-26 overflow-hidden">
-      {/* Fondo diagonal con fade */}
       <div
         className="absolute inset-0 w-full h-full z-0 pointer-events-none"
         style={{
@@ -24,7 +27,12 @@ export const Landing = () => {
       />
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 gap-0 md:gap-4">
-        <div className="flex-1 flex flex-col items-start md:justify-center text-left gap-4 md:pl-4">
+        <motion.div
+          className="flex-1 flex flex-col items-start md:justify-center text-left gap-4 md:pl-4"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <span className="uppercase tracking-widest text-green-200 font-semibold text-sm md:text-base mb-2">
             Protección profesional
           </span>
@@ -47,15 +55,14 @@ export const Landing = () => {
             >
               Nuestros servicios
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/contact-us"
               className="px-8 py-3 rounded-full border border-green-400 text-green-100 hover:bg-green-700 hover:text-white font-semibold text-lg shadow transition-all duration-200"
             >
               Solicitar presupuesto
-            </a>
+            </Link>
           </div>
-        </div>
-        {/* Imagen solo visible en desktop, pero el fondo ya la incluye */}
+        </motion.div>
         <div className="hidden md:block flex-1" />
       </div>
     </section>
