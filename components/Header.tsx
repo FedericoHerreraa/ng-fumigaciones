@@ -207,14 +207,14 @@ const DesktopMenu = ({ pathname, handleClick }: { pathname: string, handleClick:
                     href={'/'}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >
-                    <FaHouse size={16} className="transition-transform duration-300 group-hover:scale-110" />
+                    <FaHouse size={16} />
                     <span>Inicio</span>
                 </Link>
                 <button
                     onClick={handleClick}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >
-                    <FaHandshake size={18} className="transition-transform duration-300 group-hover:scale-110" />
+                    <FaHandshake size={18} />
                     <span>Servicios</span>
                 </button>
             </nav>
@@ -225,14 +225,14 @@ const DesktopMenu = ({ pathname, handleClick }: { pathname: string, handleClick:
                     href={'/about-us'}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/about-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >
-                    <FaUserGroup size={16} className="transition-transform duration-300 group-hover:scale-110" />
+                    <FaUserGroup size={16} />
                     <span>Sobre nosotros</span>
                 </Link>
                 <Link
                     href={'/contact-us'}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/contact-us' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >
-                    <FaPenToSquare size={14} className="transition-transform duration-300 group-hover:scale-110" />
+                    <FaPenToSquare size={14} />
                     <span>Contáctanos</span>
                 </Link>
             </nav>
