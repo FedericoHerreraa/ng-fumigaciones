@@ -1,27 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { FaBug, FaAward } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
-
-// Simple hook para detectar si el contador está en vista
-function useInView(ref: React.RefObject<Element | null>) {
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsInView(true);
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [ref]);
-
-  return isInView;
-}
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 const Counter = ({
   from = 0,
@@ -32,24 +14,27 @@ const Counter = ({
   to: number;
   plus?: boolean;
 }) => {
-  const ref = useRef<HTMLParagraphElement>(null);
-  const isInView = useInView(ref);
-  const [count, setCount] = useState(from);
+  const count = useMotionValue(from);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  const [display, setDisplay] = useState(from);
 
   useEffect(() => {
-    if (isInView && count < to) {
-      const interval = setInterval(() => {
-        setCount((prev) => (prev < to ? prev + 1 : to));
-      }, 30);
-      return () => clearInterval(interval);
-    }
-  }, [isInView, to, count]);
+    const controls = animate(count, to, {
+      duration: 1.5,
+      ease: "easeOut",
+    });
+    return controls.stop;
+  }, [to, count]);
+
+  useEffect(() => {
+    return rounded.on("change", (v) => setDisplay(v));
+  }, [rounded]);
 
   return (
-    <p ref={ref} className="md:text-5xl text-3xl font-bold text-green-800">
-      {count}
+    <motion.span className="md:text-5xl text-3xl font-bold text-green-800">
+      {display}
       {plus ? "+" : ""}
-    </p>
+    </motion.span>
   );
 };
 
