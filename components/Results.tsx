@@ -1,9 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaBug, FaAward } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+
+// Hook para detectar si el elemento está en pantalla
+function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.3) {
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+  if (typeof window === "undefined" || !ref.current) return;
+  const observer = new window.IntersectionObserver(
+    ([entry]) => setInView(entry.isIntersecting),
+    { threshold }
+  );
+  observer.observe(ref.current);
+  return () => observer.disconnect();
+}, [ref, threshold]);
+
+  return inView;
+}
 
 const Counter = ({
   from = 0,
@@ -14,24 +31,34 @@ const Counter = ({
   to: number;
   plus?: boolean;
 }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, 0.3); // Cambia el umbral según sea necesario
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const [display, setDisplay] = useState(from);
 
   useEffect(() => {
-    const controls = animate(count, to, {
-      duration: 1.5,
-      ease: "easeOut",
-    });
-    return controls.stop;
-  }, [to, count]);
+    let controls: ReturnType<typeof animate> | undefined;
+    if (isInView) {
+      controls = animate(count, to, {
+        duration: 1.5,
+        ease: "easeOut",
+      });
+    } else {
+      count.set(from); // Reinicia si sale de pantalla (opcional)
+    }
+    return () => controls?.stop();
+  }, [isInView, to, from, count]);
 
   useEffect(() => {
     return rounded.on("change", (v) => setDisplay(v));
   }, [rounded]);
 
   return (
-    <motion.span className="md:text-5xl text-3xl font-bold text-green-800">
+    <motion.span
+      ref={ref}
+      className="md:text-5xl text-3xl font-bold text-green-800"
+    >
       {display}
       {plus ? "+" : ""}
     </motion.span>

@@ -41,7 +41,7 @@ export const Landing = () => {
             <br />
             cuidamos tu salud
           </h1>
-          <p className="text-green-100 text-lg md:text-2xl font-medium max-w-lg">
+          <p className="text-green-100 text-lg md:text-xl font-medium max-w-lg">
             Expertos en control de plagas y desinfección ambiental para hogares,
             empresas y consorcios.
             <span className="block mt-2 text-green-200 text-base font-normal">
@@ -51,13 +51,13 @@ export const Landing = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <a
               href="#services"
-              className="px-8 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-lg shadow-lg transition-all duration-200"
+              className="px-4 py-1.5 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-base shadow-lg transition-all duration-200"
             >
               Nuestros servicios
             </a>
             <Link
               href="/contact-us"
-              className="px-8 py-3 rounded-full border border-green-400 text-green-100 hover:bg-green-700 hover:text-white font-semibold text-lg shadow transition-all duration-200"
+              className="px-5 py-2 rounded-full border border-green-400 text-green-100 hover:bg-green-700 hover:text-white font-semibold text-base shadow transition-all duration-200"
             >
               Solicitar presupuesto
             </Link>
