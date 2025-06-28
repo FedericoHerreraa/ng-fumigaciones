@@ -49,7 +49,7 @@ export default function AboutUs() {
       </section>
 
       <Values />
-      <Opinions />
+      {/* <Opinions /> */}
       <CTA />
     </div>
   );
