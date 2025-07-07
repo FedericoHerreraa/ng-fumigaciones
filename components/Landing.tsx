@@ -1,6 +1,6 @@
 "use client";
 
-import backgroundImage from "@/images/fumigacion.jpeg";
+// import backgroundImage from "@/images/fumigacion.jpeg";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,7 @@ export const Landing = () => {
               rgba(58, 90, 64, 0.1) 70%, 
               rgba(58, 90, 64, 0) 75%
             ),
-            url(${backgroundImage.src}) right center / cover no-repeat
+            url(/web/images/fumigacion.jpeg) right center / cover no-repeat
           `,
           maskImage: "linear-gradient(120deg, #000 60%, transparent 100%)",
           WebkitMaskImage:

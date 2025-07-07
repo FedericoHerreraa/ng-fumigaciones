@@ -1,7 +1,7 @@
 import { Values } from "@/components/Values";
 import type { Metadata } from "next";
 import Image from "next/image";
-import saludImg from "@/images/salud.png";
+// import saludImg from "@/images/salud.png";
 import { CTA } from "@/components/CTA";
 // import { Opinions } from "@/components/Opinions";
 
@@ -16,7 +16,7 @@ export default function AboutUs() {
       <section className="w-full relative min-h-[420px] bg-white  flex items-stretch shadow-lg overflow-hidden">
         <div className="hidden md:block absolute inset-0 w-1/2 h-full z-0">
           <Image
-            src={saludImg}
+            src='/web/images/salud.png'
             alt="Salud y control ambiental"
             fill
             className="object-cover object-center"

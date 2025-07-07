@@ -8,7 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 import Image from "next/image";
-import logo from "@/images/logo.png";
+// import logo from "@/images/logo.png";
 
 export const Footer = () => {
   return (
@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
-            src={logo}
+            src='/web/images/logo.png'
             alt="Logo NG Fumigaciones"
             width={200}
             height={160}

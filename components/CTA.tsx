@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import imagen1 from "@/images/control1.jpg";
-import imagen2 from "@/images/control2.jpeg";
-import imagen3 from "@/images/pest-control-30.jpg";
+// import imagen1 from "@/images/control1.jpg";
+// import imagen2 from "@/images/control2.jpeg";
+// import imagen3 from "@/images/pest-control-30.jpg";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { useMobileView } from "@/context/MobileViewContext";
@@ -54,7 +54,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src={imagen1}
+              src='/web/images/control1.jpg'
               alt="Control 1"
               className="object-cover rounded-lg shadow-xl w-full h-full"
               style={{ objectPosition: "center" }}
@@ -69,7 +69,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src={imagen2}
+              src='/web/images/control2.jpeg'
               alt="Control 2"
               className="object-cover rounded-lg shadow-md w-full h-full"
               style={{ objectPosition: "center" }}
@@ -83,7 +83,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src={imagen3}
+              src='/web/images/pest-control-30.jpg'
               alt="Control 3"
               className="object-cover rounded-lg shadow w-full h-full"
               style={{ objectPosition: "center" }}
@@ -99,7 +99,7 @@ export const CTA = () => {
           viewport={{ once: true }}
         >
           <Image
-            src={imagen1}
+              src='/web/images/control1.jpg'
             alt="Control 1"
             className="object-cover rounded-lg shadow-xl w-full h-full"
             style={{ objectPosition: "center" }}

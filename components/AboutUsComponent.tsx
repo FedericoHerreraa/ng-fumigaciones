@@ -1,6 +1,6 @@
 'use client'
 
-import logo from "@/images/logo.png";
+// import logo from "@/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -38,7 +38,7 @@ export const AboutUsComponent = () => {
         viewport={{ once: true }}
       >
         <Image
-          src={logo}
+          src='/web/images/logo.png'
           alt="Logo"
           className="w-56 h-36 object-contain drop-shadow-xl"
           priority
