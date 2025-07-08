@@ -1,9 +1,6 @@
 'use client'
 
 import Image from "next/image";
-// import imagen1 from "@/images/control1.jpg";
-// import imagen2 from "@/images/control2.jpeg";
-// import imagen3 from "@/images/pest-control-30.jpg";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { useMobileView } from "@/context/MobileViewContext";

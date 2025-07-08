@@ -5,7 +5,6 @@ import { FaBug, FaAward } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
-// Hook para detectar si el elemento está en pantalla
 function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.3) {
   const [inView, setInView] = useState(false);
 
@@ -32,7 +31,7 @@ const Counter = ({
   plus?: boolean;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, 0.3); // Cambia el umbral según sea necesario
+  const isInView = useInView(ref, 0.3); 
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const [display, setDisplay] = useState(from);
@@ -45,7 +44,7 @@ const Counter = ({
         ease: "easeOut",
       });
     } else {
-      count.set(from); // Reinicia si sale de pantalla (opcional)
+      count.set(from); 
     }
     return () => controls?.stop();
   }, [isInView, to, from, count]);

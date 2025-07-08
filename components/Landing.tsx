@@ -50,7 +50,7 @@ export const Landing = () => {
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <a
               href="#services"
-              className="px-4 py-1.5 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-base shadow-lg transition-all duration-200"
+              className="px-4 py-2 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold text-base shadow-lg transition-all duration-200"
             >
               Nuestros servicios
             </a>

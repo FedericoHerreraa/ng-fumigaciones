@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-// import whatsappIcon from '@/images/whatsapp-icon.png'
 
 export const WhatsappQuickAccess = () => {
     const phone = '5491123497999'

@@ -34,13 +34,18 @@ export const ContactUsController = () => {
             toast.error('Por favor, complete todos los campos')
             return
         }
+
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL
         
         setIsLoading(true)
-        const response = await fetch('/web/api/send-email', {
+        const response = await fetch(`${apiUrl}/api/send-email`, {
             method: 'POST',
-            body: JSON.stringify(formState)
+            body: JSON.stringify(formState),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
-        console.log('response', response)
+        
         if (response.ok) {
             toast.success('Email enviado correctamente')
         } else {

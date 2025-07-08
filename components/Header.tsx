@@ -1,6 +1,5 @@
 'use client'
 
-// import logo from '@/images/logo.png'
 import Image from 'next/image'
 import Link from 'next/link';
 import {
@@ -32,7 +31,7 @@ export const Header = () => {
             router.push('/')
             setTimeout(() => {
                 scrollToSection('services')
-            }, 300)
+            }, 1000)
         } else scrollToSection('services')
     }
 

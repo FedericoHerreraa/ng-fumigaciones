@@ -1,9 +1,7 @@
 import { Values } from "@/components/Values";
 import type { Metadata } from "next";
 import Image from "next/image";
-// import saludImg from "@/images/salud.png";
 import { CTA } from "@/components/CTA";
-// import { Opinions } from "@/components/Opinions";
 
 export const metadata: Metadata = {
   title: "NG Desinfecciones | Sobre Nosotros",
