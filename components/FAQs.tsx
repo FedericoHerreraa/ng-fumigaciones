@@ -1,4 +1,3 @@
-// import fondoFAQ from "@/images/fondoFAQ.png";
 import {
   Accordion,
   AccordionContent,
@@ -11,12 +10,11 @@ export const FAQs = () => {
     <div
       className="w-full py-16 px-4 relative"
       style={{
-        backgroundImage: `url(/images/fondoFAQ.png)`,
+        backgroundImage: `url(/web/images/fondoFAQ.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay para mejorar contraste */}
       <div className="absolute inset-0 sm pointer-events-none z-0" />
       <div className="relative z-10 max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold mb-10 text-center text-green-900 drop-shadow-lg tracking-tight">

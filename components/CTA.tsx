@@ -54,10 +54,11 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/images/control1.jpg'
+              src='/web/images/control1.jpg'
               alt="Control 1"
               className="object-cover rounded-lg shadow-xl w-full h-full"
               style={{ objectPosition: "center" }}
+              unoptimized={true}
             />
           </motion.div>
   
@@ -69,10 +70,11 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/images/control2.jpeg'
+              src='/web/images/control2.jpeg'
               alt="Control 2"
               className="object-cover rounded-lg shadow-md w-full h-full"
               style={{ objectPosition: "center" }}
+              unoptimized={true}
             />
           </motion.div>
           <motion.div
@@ -83,10 +85,11 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/images/pest-control-30.jpg'
+              src='/web/images/pest-control-30.jpg'
               alt="Control 3"
               className="object-cover rounded-lg shadow w-full h-full"
               style={{ objectPosition: "center" }}
+              unoptimized={true}
             />
           </motion.div>
         </motion.div>
@@ -99,10 +102,11 @@ export const CTA = () => {
           viewport={{ once: true }}
         >
           <Image
-              src='/images/control1.jpg'
+              src='/web/images/control1.jpg'
             alt="Control 1"
             className="object-cover rounded-lg shadow-xl w-full h-full"
             style={{ objectPosition: "center" }}
+            unoptimized={true}
           />
         </motion.div>
       )}

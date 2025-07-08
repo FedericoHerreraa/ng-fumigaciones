@@ -38,10 +38,11 @@ export const AboutUsComponent = () => {
         viewport={{ once: true }}
       >
         <Image
-          src='/images/logo.png'
+          src='/web/images/logo.png'
           alt="Logo"
           className="w-56 h-36 object-contain drop-shadow-xl"
           priority
+          unoptimized={true}
         />
       </motion.div>
     </section>

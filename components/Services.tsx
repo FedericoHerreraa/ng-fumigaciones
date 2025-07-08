@@ -2,48 +2,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-// import Cucaracha from "@/images/cucaracha.png";
-// import Alacran from "@/images/alacran.png";
-// import Mosquito from "@/images/mosquito.png";
-// import Pulga from "@/images/pulga.png";
-// import Palomas from "@/images/palomas.png";
-// import Roedores from "@/images/roedores.png";
-// import Murcielagos from "@/images/murcielagos.png";
-
 const services = [
   {
     name: "Mosquitos",
-    image: '/images/mosquito.png',
+    image: '/web/images/mosquito.png',
     desc: "Tratamientos efectivos para eliminar y prevenir la proliferación de mosquitos en interiores y exteriores.",
   },
   {
     name: "Alacranes",
-    image: '/images/alacran.png',
+    image: '/web/images/alacran.png',
     desc: "Control y prevención de alacranes en viviendas, empresas y espacios comunes.",
   },
   {
     name: "Cucarachas",
-    image: '/images/cucaracha.png',
+    image: '/web/images/cucaracha.png',
     desc: "Eliminación profesional de cucarachas con productos seguros y de alta eficacia.",
   },
   {
     name: "Pulgas",
-    image: '/images/pulga.png',
+    image: '/web/images/pulga.png',
     desc: "Desinfección y control de pulgas en hogares, mascotas y ambientes cerrados.",
   },
   {
     name: "Palomas",
-    image: '/images/palomas.png',
+    image: '/web/images/palomas.png',
     desc: "Soluciones para evitar la presencia y anidación de palomas en techos y balcones.",
   },
   {
     name: "Roedores",
-    image: '/images/roedores.png',
+    image: '/web/images/roedores.png',
     desc: "Control integral de roedores con métodos seguros y efectivos.",
   },
   {
     name: "Murciélagos",
-    image: '/images/murcielagos.png',
+    image: '/web/images/murcielagos.png',
     desc: "Prevención y control de murciélagos, respetando la normativa vigente.",
   },
 ];
@@ -68,6 +60,7 @@ export const Services = () => {
                 alt={item.name}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized={true}
               />
             </div>
 

@@ -16,11 +16,12 @@ export const Footer = () => {
       <div className="md:w-[80%] w-[95%] mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
         <div className="flex flex-col items-center md:items-start gap-4 md:w-3/8 w-full">
           <Image
-            src='/images/logo.png'
+            src='/web/images/logo.png'
             alt="Logo NG Fumigaciones"
             width={200}
             height={160}
             className="object-contain"
+            unoptimized={true}
           />
           <p className="text-sm text-green-100 max-w-xs text-center md:text-left">
             NG Desinfecciones - Soluciones profesionales en control de plagas

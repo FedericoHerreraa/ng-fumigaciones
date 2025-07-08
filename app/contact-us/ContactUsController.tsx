@@ -36,10 +36,11 @@ export const ContactUsController = () => {
         }
         
         setIsLoading(true)
-        const response = await fetch('/api/send-email', {
+        const response = await fetch('/web/api/send-email', {
             method: 'POST',
             body: JSON.stringify(formState)
         })
+        console.log('response', response)
         if (response.ok) {
             toast.success('Email enviado correctamente')
         } else {

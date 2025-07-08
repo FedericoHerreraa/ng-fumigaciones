@@ -56,11 +56,12 @@ export default async function DetailPage({
     <div className="min-h-screen bg-gradient-to-br from-green-50/30 to-slate-50">
       <div className="relative  text-white overflow-hidden">
         <Image
-          src='/images/BannerTitulos.png'
+          src='/web/images/BannerTitulos.png'
           alt="Banner"
           fill
           className="object-cover object-center absolute inset-0 z-0"
           priority
+          unoptimized={true}
         />
         <div className="relative z-10 container mx-auto px-6 py-16 overflow-hidden">
           <div className="relative z-10">

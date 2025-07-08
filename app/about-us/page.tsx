@@ -16,12 +16,13 @@ export default function AboutUs() {
       <section className="w-full relative min-h-[420px] bg-white  flex items-stretch shadow-lg overflow-hidden">
         <div className="hidden md:block absolute inset-0 w-1/2 h-full z-0">
           <Image
-            src='/images/salud.png'
+            src='/web/images/salud.png'
             alt="Salud y control ambiental"
             fill
             className="object-cover object-center"
             style={{ clipPath: "polygon(0 0, 100% 0, 70% 100%, 0% 100%)" }}
             priority
+            unoptimized={true}
           />
         </div>
         <div className="relative z-10 w-full md:w-1/2 ml-auto flex items-center">

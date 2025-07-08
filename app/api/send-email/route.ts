@@ -288,7 +288,8 @@ export async function POST(req: Request) {
         // Email sent to us
         await resend.emails.send({
             from: 'contacto@ngdesinfecciones.com.ar',
-            to: 'info@ngdesinfecciones.com.ar',
+            // to: 'info@ngdesinfecciones.com.ar',
+            to: 'fede.juan.herrera@gmail.com',
             subject: subject,
             html: emailUsMessage
         })
