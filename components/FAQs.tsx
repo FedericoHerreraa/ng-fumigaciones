@@ -11,7 +11,7 @@ export const FAQs = () => {
     <div
       className="w-full py-16 px-4 relative"
       style={{
-        backgroundImage: `url(/web/images/fondoFAQ.png)`,
+        backgroundImage: `url(/images/fondoFAQ.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

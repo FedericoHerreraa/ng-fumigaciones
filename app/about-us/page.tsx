@@ -16,7 +16,7 @@ export default function AboutUs() {
       <section className="w-full relative min-h-[420px] bg-white  flex items-stretch shadow-lg overflow-hidden">
         <div className="hidden md:block absolute inset-0 w-1/2 h-full z-0">
           <Image
-            src='/web/images/salud.png'
+            src='/images/salud.png'
             alt="Salud y control ambiental"
             fill
             className="object-cover object-center"

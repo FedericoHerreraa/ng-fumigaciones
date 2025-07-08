@@ -54,7 +54,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/web/images/control1.jpg'
+              src='/images/control1.jpg'
               alt="Control 1"
               className="object-cover rounded-lg shadow-xl w-full h-full"
               style={{ objectPosition: "center" }}
@@ -69,7 +69,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/web/images/control2.jpeg'
+              src='/images/control2.jpeg'
               alt="Control 2"
               className="object-cover rounded-lg shadow-md w-full h-full"
               style={{ objectPosition: "center" }}
@@ -83,7 +83,7 @@ export const CTA = () => {
             viewport={{ once: true }}
           >
             <Image
-              src='/web/images/pest-control-30.jpg'
+              src='/images/pest-control-30.jpg'
               alt="Control 3"
               className="object-cover rounded-lg shadow w-full h-full"
               style={{ objectPosition: "center" }}
@@ -99,7 +99,7 @@ export const CTA = () => {
           viewport={{ once: true }}
         >
           <Image
-              src='/web/images/control1.jpg'
+              src='/images/control1.jpg'
             alt="Control 1"
             className="object-cover rounded-lg shadow-xl w-full h-full"
             style={{ objectPosition: "center" }}

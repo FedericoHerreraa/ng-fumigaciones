@@ -56,7 +56,7 @@ export default async function DetailPage({
     <div className="min-h-screen bg-gradient-to-br from-green-50/30 to-slate-50">
       <div className="relative  text-white overflow-hidden">
         <Image
-          src='/web/images/BannerTitulos.png'
+          src='/images/BannerTitulos.png'
           alt="Banner"
           fill
           className="object-cover object-center absolute inset-0 z-0"

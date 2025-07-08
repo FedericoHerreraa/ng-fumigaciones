@@ -13,37 +13,37 @@ import { FaArrowRight } from "react-icons/fa";
 const services = [
   {
     name: "Mosquitos",
-    image: '/web/images/mosquito.png',
+    image: '/images/mosquito.png',
     desc: "Tratamientos efectivos para eliminar y prevenir la proliferación de mosquitos en interiores y exteriores.",
   },
   {
     name: "Alacranes",
-    image: '/web/images/alacran.png',
+    image: '/images/alacran.png',
     desc: "Control y prevención de alacranes en viviendas, empresas y espacios comunes.",
   },
   {
     name: "Cucarachas",
-    image: '/web/images/cucaracha.png',
+    image: '/images/cucaracha.png',
     desc: "Eliminación profesional de cucarachas con productos seguros y de alta eficacia.",
   },
   {
     name: "Pulgas",
-    image: '/web/images/pulga.png',
+    image: '/images/pulga.png',
     desc: "Desinfección y control de pulgas en hogares, mascotas y ambientes cerrados.",
   },
   {
     name: "Palomas",
-    image: '/web/images/palomas.png',
+    image: '/images/palomas.png',
     desc: "Soluciones para evitar la presencia y anidación de palomas en techos y balcones.",
   },
   {
     name: "Roedores",
-    image: '/web/images/roedores.png',
+    image: '/images/roedores.png',
     desc: "Control integral de roedores con métodos seguros y efectivos.",
   },
   {
     name: "Murciélagos",
-    image: '/web/images/murcielagos.png',
+    image: '/images/murcielagos.png',
     desc: "Prevención y control de murciélagos, respetando la normativa vigente.",
   },
 ];

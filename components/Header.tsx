@@ -100,7 +100,7 @@ export const Header = () => {
                     <div className="absolute inset-0 bg-white rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                     <div className="relative bg-white px-6 py-4 rounded-full shadow-2xl ring-4 ring-white/30 group-hover:ring-white/50 transition-all duration-300 group-hover:scale-105">
                         <Image
-                            src='/web/images/logo.png'
+                            src='/images/logo.png'
                             alt="Logo"
                             className="w-52 h-32 object-contain"
                             priority
@@ -119,7 +119,7 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
             <div className="flex items-center">
                 <div className="bg-white/10 p-2 rounded-xl backdrop-blur-sm border border-white/20">
                     <Image
-                        src='/web/images/logo.png'
+                        src='/images/logo.png'
                         alt="Logo"
                         className="w-12 h-8 object-contain"
                         priority
@@ -142,7 +142,7 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
                             <div className="flex justify-center mb-4 pb-4 border-b border-white/20">
                                 <div className="bg-white p-3 rounded-2xl shadow-xl">
                                     <Image
-                                        src='/web/images/logo.png'
+                                        src='/images/logo.png'
                                         alt="Logo"
                                         className="w-20 h-14 object-contain"
                                         priority

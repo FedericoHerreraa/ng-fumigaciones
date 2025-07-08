@@ -38,7 +38,7 @@ export const AboutUsComponent = () => {
         viewport={{ once: true }}
       >
         <Image
-          src='/web/images/logo.png'
+          src='/images/logo.png'
           alt="Logo"
           className="w-56 h-36 object-contain drop-shadow-xl"
           priority
