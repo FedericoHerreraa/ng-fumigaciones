@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <Landing />
-      <Results />
       <CTA />
       <Services />
+      <Results />
       <AboutUsComponent />
       <FAQs />
     </>

@@ -66,11 +66,11 @@ const Counter = ({
 
 export const Results = () => {
   return (
-    <section className="w-full py-20 bg-gray-100 relative">
+    <section className="w-full py-20 relative">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-green-900 mb-12 drop-shadow-lg tracking-tight">
+        {/* <h2 className="text-3xl md:text-4xl font-extrabold text-center text-green-900 mb-12 drop-shadow-lg tracking-tight">
           Impacto de Nuestro Trabajo
-        </h2>
+        </h2> */}
         <div
           className="bg-white shadow-xl p-8 flex flex-col md:flex-row justify-around items-center gap-10 rounded-2xl"
           style={{
