@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
 import {
@@ -11,7 +12,7 @@ import {
     FaPenToSquare,
     FaBars
 } from "react-icons/fa6";
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { scrollToSection } from '@/utils/functions';
 import { useMobileView } from "@/context/MobileViewContext";
 
@@ -23,30 +24,30 @@ import {
 
 export const Header = () => {
     const pathname = usePathname()
-    const router = useRouter()
+    // const router = useRouter()
     const isMobile = useMobileView();
 
-    const handleClick = () => {
-        if (pathname !== '/web') {
-            router.push('/')
-            setTimeout(() => {
-                scrollToSection('services')
-            }, 1000)
-        } else scrollToSection('services')
-    }
+    // const handleClick = () => {
+    //     if (pathname !== '/web') {
+    //         router.push('/')
+    //         setTimeout(() => {
+    //             scrollToSection('services')
+    //         }, 1000)
+    //     } else scrollToSection('services')
+    // }
 
     return (
         <header className="relative text-white shadow-2xl">
             <div className="relative h-20 bg-[#4a6b4d] backdrop-blur-sm">
                 {isMobile
-                    ? <MobileMenu pathname={pathname} handleClick={handleClick} />
-                    : <DesktopMenu pathname={pathname} handleClick={handleClick} />
+                    ? <MobileMenu pathname={pathname} />
+                    : <DesktopMenu pathname={pathname}  />
                 }
             </div>
 
             <div className={`relative bg-gradient-to-br from-slate-50 to-gray-100 border-b border-green-200/50 ${isMobile ? 'h-auto py-4' : 'h-32'}`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
-                
+
                 {isMobile ? (
                     <div className="relative z-10 space-y-3 px-4">
                         <div className='flex items-center gap-3 p-3 bg-white/50 rounded-xl shadow-sm'>
@@ -113,7 +114,12 @@ export const Header = () => {
 }
 
 
-const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: () => void }) => {
+const MobileMenu = ({ pathname }: { pathname: string }) => {
+    const [open, setOpen] = useState(false)
+    // const router = useRouter()
+
+    const closeSheet = () => setOpen(false)
+
     return (
         <div className="relative z-10 h-full flex items-center justify-between px-4">
             <div className="flex items-center">
@@ -129,12 +135,13 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
             </div>
 
             <div>
-                <Sheet>
+                <Sheet open={open} onOpenChange={setOpen}>
                     <SheetTrigger asChild>
                         <button className="p-3 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 hover:scale-105 backdrop-blur-sm border border-white/20 shadow-lg">
                             <FaBars size={20} className="text-white" />
                         </button>
                     </SheetTrigger>
+
                     <SheetContent
                         side="top"
                         className="h-auto w-full animate-in slide-in-from-top duration-300 bg-gradient-to-br from-[#2c5530] to-[#4a6b4d] border-b-4 border-green-400"
@@ -154,22 +161,33 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
 
                             <Link
                                 href={'/'}
+                                onClick={closeSheet}
                                 className={`group flex items-center gap-4 px-5 py-4 rounded-xl font-medium text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg border ${pathname === '/' ? 'bg-white/20 text-white shadow-md border-white/30' : 'text-green-100 border-white/10 hover:border-white/20'}`}
                             >
                                 <FaHouse size={18} className="transition-transform duration-300 group-hover:scale-110" />
                                 <span>Inicio</span>
                             </Link>
 
-                            <button
-                                onClick={handleClick}
+                            <a
+                                href="#services"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    closeSheet();
+
+                                    setTimeout(() => {
+                                        window.history.pushState(null, '', '#services');
+                                        scrollToSection('services');
+                                    }, 300);
+                                }}
                                 className={`group flex items-center gap-4 px-5 py-4 rounded-xl font-medium text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg border ${pathname === '/services' ? 'bg-white/20 text-white shadow-md border-white/30' : 'text-green-100 border-white/10 hover:border-white/20'}`}
                             >
                                 <FaHandshake size={20} className="transition-transform duration-300 group-hover:scale-110" />
                                 <span>Servicios</span>
-                            </button>
+                            </a>
 
                             <Link
                                 href={'/about-us'}
+                                onClick={closeSheet}
                                 className={`group flex items-center gap-4 px-5 py-4 rounded-xl font-medium text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg border ${pathname === '/about-us' ? 'bg-white/20 text-white shadow-md border-white/30' : 'text-green-100 border-white/10 hover:border-white/20'}`}
                             >
                                 <FaUserGroup size={18} className="transition-transform duration-300 group-hover:scale-110" />
@@ -178,21 +196,12 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
 
                             <Link
                                 href={'/contact-us'}
+                                onClick={closeSheet}
                                 className={`group flex items-center gap-4 px-5 py-4 rounded-xl font-medium text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg border ${pathname === '/contact-us' ? 'bg-white/20 text-white shadow-md border-white/30' : 'text-green-100 border-white/10 hover:border-white/20'}`}
                             >
                                 <FaPenToSquare size={16} className="transition-transform duration-300 group-hover:scale-110" />
                                 <span>Contáctanos</span>
                             </Link>
-
-                            <div className="mt-4 pt-4 border-t border-white/20">
-                                <div className="bg-white/10 rounded-xl p-4 text-center">
-                                    <p className="text-green-100 text-sm mb-2">¿Necesitas ayuda urgente?</p>
-                                    <div className="flex items-center justify-center gap-2 text-white font-semibold">
-                                        <FaPhone size={16} />
-                                        <span>4552-1746</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </SheetContent>
                 </Sheet>
@@ -201,7 +210,9 @@ const MobileMenu = ({ pathname, handleClick }: { pathname: string, handleClick: 
     )
 }
 
-const DesktopMenu = ({ pathname, handleClick }: { pathname: string, handleClick: () => void }) => {
+const DesktopMenu = ({ pathname }: { pathname: string }) => {
+    // const router = useRouter()
+
     return (
         <div className="relative z-10 h-full flex items-center justify-between px-8 lg:px-16">
             <nav className="flex items-center gap-3">
@@ -212,13 +223,27 @@ const DesktopMenu = ({ pathname, handleClick }: { pathname: string, handleClick:
                     <FaHouse size={16} />
                     <span>Inicio</span>
                 </Link>
-                <button
-                    onClick={handleClick}
+                <a
+                    href="#services"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        setTimeout(() => {
+                            window.history.pushState(null, '', '#services');
+                            scrollToSection('services');
+                        }, 300);
+                        // if (pathname !== '/web') {
+                        //     router.push('/')
+                            
+                        // } else {
+                        //     window.history.pushState(null, '', '#services');
+                        //     scrollToSection('services');
+                        // }
+                    }}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >
                     <FaHandshake size={18} />
                     <span>Servicios</span>
-                </button>
+                </a>
             </nav>
 
 
