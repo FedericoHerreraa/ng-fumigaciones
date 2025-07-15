@@ -12,15 +12,14 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 
-
 export async function generateStaticParams() {
   return [
-    { nameService: 'pulgas' },
-    { nameService: 'mosquitos' },
-    { nameService: 'alacranes' },
-    { nameService: 'cucarachas' },
-    { nameService: 'roedores' },
-    { nameService: 'murcielagos' },
+    { nameService: "pulgas" },
+    { nameService: "mosquitos" },
+    { nameService: "alacranes" },
+    { nameService: "cucarachas" },
+    { nameService: "roedores" },
+    { nameService: "murcielagos" },
   ];
 }
 
@@ -55,7 +54,7 @@ export default async function DetailPage({
     <div className="min-h-screen bg-gradient-to-br from-green-50/30 to-slate-50">
       <div className="relative  text-white overflow-hidden">
         <Image
-          src='/web/images/BannerTitulos.png'
+          src="/web/images/BannerTitulos.png"
           alt="Banner"
           fill
           className="object-cover object-center absolute inset-0 z-0"
@@ -168,7 +167,9 @@ export default async function DetailPage({
                 <div className="p-3 bg-green-100 rounded-full">
                   <FaShieldAlt className="text-green-600" size={20} />
                 </div>
-                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">Prevención</h2>
+                <h2 className="md:text-3xl text-2xl font-bold text-gray-800">
+                  Te orientamos sobre medidas de prevención
+                </h2>
               </div>
               <div className="bg-green-50 rounded-xl md:p-6 p-4 border-l-4 border-green-400">
                 <p className="text-gray-700 leading-relaxed md:text-lg">
@@ -232,16 +233,18 @@ export default async function DetailPage({
                 </div>
               </div>
 
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <FaExclamationTriangle className="text-red-500" size={20} />
-                  <h4 className="font-bold text-red-800">Emergencia</h4>
+              {nameService.toLowerCase() === "alacranes" && (
+                <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <FaExclamationTriangle className="text-red-500" size={20} />
+                    <h4 className="font-bold text-red-800">Emergencia</h4>
+                  </div>
+                  <p className="text-red-700 text-sm">
+                    En caso de picaduras de alacranes, consulte inmediatamente
+                    con un médico.
+                  </p>
                 </div>
-                <p className="text-red-700 text-sm">
-                  En caso de picaduras de alacranes, consulte inmediatamente con
-                  un médico.
-                </p>
-              </div>
+              )}
             </div>
           </div>
         </div>
@@ -294,7 +297,7 @@ const serviceDetails = {
       "Posible transmisión de enfermedades como dengue, malaria o encefalitis",
     ],
     treatment:
-      "Para una mayor eficiencia en los tratamientos, nuestra empresa utiliza máquinas nebulizadoras ULV, que permiten que el producto utilizado alcance todas las superficies afectadas.",
+      "Para una mayor eficiencia en los tratamientos, nuestra empresa utiliza máquinas nebulizadoras en frio ultra bajo volumen (ULV), que permiten que el producto utilizado alcance todas las superficies afectadas  y como acción proactiva, hemos incorporado a nuestra formulación habitual, un regulador de crecimiento que inhibe la reproducción del mosquito en estados jóvenes, evitando que se conviertan en adultos.",
     prevention:
       "Eliminar recipientes con agua estancada. Tapar tanques y canaletas. Colocar mosquiteros en aberturas.",
   },
@@ -310,7 +313,7 @@ const serviceDetails = {
       "En casos graves: sudoración, palpitaciones, vómitos, dificultad respiratoria, especialmente en niños y personas sensibles.",
     ],
     treatment:
-      "Ante una picadura, consulte inmediatamente con un médico. Mantenga la calma, lave la zona con agua y jabón y evite remedios caseros. El control profesional incluye inspección, limpieza y sellado de grietas y posibles refugios.",
+      "Detectamos refugios y puntos críticos donde se esconden los alacranes. Aplicamos insecticidas específicos de bajo riesgo para personas y mascotas.",
     prevention:
       "Utilizar rejillas sanitarias en desagües de ambientes y sanitarios. Controlar las entradas y salidas de cañerías, aberturas y hendiduras. Colocar burletes o alambre tejido (mosquitero) en puertas y ventanas. Revocar las paredes, reparar grietas en pisos, paredes y techos. Controlar cámaras subterráneas, cañerías, sótanos, huecos de ascensor y oquedades de las paredes.",
   },
@@ -324,8 +327,7 @@ const serviceDetails = {
       "Cucaracha alemana: Es la más pequeña ya que no supera el centímetro y medio de largo y las que mejor se adapta a convivir con el ser humano. Su color es amarillento, se instalan en grietas de madera, alacenas, bajo mesadas, aparatos eléctricos,  debajo de los azulejos. \n\n  " +
       "Como ya hemos mencionado, las cucarachas son una plaga de difícil erradicación, para esa tarea confiá en los mejores profesionales de NG Desinfecciones.",
     symptoms: [
-      "Contaminación de alimentos",
-      "Problemas respiratorios y alergias",
+      "Caminan por basura, desagües y excrementos, y luego contaminan alimentos, utensilios y superficies. Pueden transmitir bacterias como: Salmonella, coli y Estreptococos"
     ],
     treatment:
       "Realizamos la desinsectación integral mediante rociado con pulverizadores mecánicos y productos de baja toxicidad, autorizados por el Ministerio de Salud. Estos productos tienen amplio espectro, alto poder residual y son seguros para personas y mascotas. También aplicamos geles insecticidas en zonas sensibles, ideales para ambientes con personas alérgicas o donde no se pueden vaciar alacenas. Recomendamos el servicio mensual para mantener el control y evitar reinfestaciones.",
