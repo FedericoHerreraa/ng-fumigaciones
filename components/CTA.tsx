@@ -20,9 +20,9 @@ export const CTA = () => {
       >
         <span className="font-semibold italic text-zinc-600 md:text-base text-sm">Solicitá una cotización sin compromiso.</span>
         <h2 className="md:text-3xl text-xl font-bold leading-snug text-green-900">
-          ¿Necesitás un servicio de desinfección confiable y profesional?
+          ¿Necesitás un servicio de desinsectación y/o desinfección confiable y profesional?
         </h2>
-        <p className="md:text-md leading-relaxed text-[#41413F]">Protegé tu hogar o negocio con nuestras soluciones efectivas y seguras.</p>
+        <p className="md:text-md leading-relaxed text-[#41413F]">Protegé tus espacios con nuestras soluciones efectivas y seguras.</p>
         <div className="flex items-center gap-2 md:mb-10 mb-5">
           <FaStar className="text-yellow-500" />
           <FaStar className="text-yellow-500" />

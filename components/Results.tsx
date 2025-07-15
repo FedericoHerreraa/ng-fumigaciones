@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { FaBug, FaAward } from "react-icons/fa6";
+import { FaBug } from "react-icons/fa6";
 import { FaSmile } from "react-icons/fa";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
@@ -9,14 +9,14 @@ function useInView(ref: React.RefObject<HTMLElement | null>, threshold = 0.3) {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-  if (typeof window === "undefined" || !ref.current) return;
-  const observer = new window.IntersectionObserver(
-    ([entry]) => setInView(entry.isIntersecting),
-    { threshold }
-  );
-  observer.observe(ref.current);
-  return () => observer.disconnect();
-}, [ref, threshold]);
+    if (typeof window === "undefined" || !ref.current) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [ref, threshold]);
 
   return inView;
 }
@@ -31,7 +31,7 @@ const Counter = ({
   plus?: boolean;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, 0.3); 
+  const isInView = useInView(ref, 0.3);
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const [display, setDisplay] = useState(from);
@@ -44,7 +44,7 @@ const Counter = ({
         ease: "easeOut",
       });
     } else {
-      count.set(from); 
+      count.set(from);
     }
     return () => controls?.stop();
   }, [isInView, to, from, count]);
@@ -67,10 +67,7 @@ const Counter = ({
 export const Results = () => {
   return (
     <section className="w-full py-20 relative">
-      <div className="max-w-5xl mx-auto px-4">
-        {/* <h2 className="text-3xl md:text-4xl font-extrabold text-center text-green-900 mb-12 drop-shadow-lg tracking-tight">
-          Impacto de Nuestro Trabajo
-        </h2> */}
+      <div className="max-w-4xl mx-auto px-4">
         <div
           className="bg-white shadow-xl p-8 flex flex-col md:flex-row justify-around items-center gap-10 rounded-2xl"
           style={{
@@ -78,22 +75,16 @@ export const Results = () => {
             borderStyle: "solid",
           }}
         >
-          <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
-            <Counter plus to={80} />
+          <div className="flex flex-col items-center gap-2 w-full md:w-1/2">
+            <Counter to={25} />
             <p className="md:text-lg text-green-900 flex items-center gap-2 font-semibold">
-              <FaBug /> Plagas eliminadas
+              <FaBug /> Años de experiencia
             </p>
           </div>
-          <div className="flex flex-col items-center gap-2 w-full md:w-1/3 border-y md:border-y-0 md:border-x border-green-700 py-6 md:py-0">
-            <Counter to={50} plus />
+          <div className="flex flex-col items-center gap-2 w-full md:w-1/2 border-y md:border-y-0 md:border-l border-green-700 py-6 md:py-0">
+            <Counter to={700} plus />
             <p className="md:text-lg text-green-900 flex items-center gap-2 font-semibold">
-              <FaSmile /> Clientes felices
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
-            <Counter to={10} plus />
-            <p className="md:text-lg text-green-900 flex items-center gap-2 font-semibold">
-              <FaAward /> Años de experiencia
+              <FaSmile /> Clientes
             </p>
           </div>
         </div>

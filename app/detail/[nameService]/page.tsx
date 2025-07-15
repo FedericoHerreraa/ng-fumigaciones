@@ -16,7 +16,6 @@ import Image from "next/image";
 export async function generateStaticParams() {
   return [
     { nameService: 'pulgas' },
-    { nameService: 'palomas' },
     { nameService: 'mosquitos' },
     { nameService: 'alacranes' },
     { nameService: 'cucarachas' },
@@ -220,8 +219,7 @@ export default async function DetailPage({
                   {[
                     "Experiencia profesional certificada",
                     "Productos seguros y efectivos",
-                    "Garantía en todos nuestros servicios",
-                    "Atención personalizada los 365 días del año",
+                    "Atención personalizada",
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <FaCheckCircle
@@ -346,17 +344,6 @@ const serviceDetails = {
       "Control ambiental y recomendaciones específicas para aspirado y limpieza frecuente de pisos.",
     prevention:
       "Desparasitar mascotas, mantener higiene en alfombras y pisos, realizar servicios preventivos periódicos.",
-  },
-  palomas: {
-    name: "Palomas",
-    description:
-      "No se detalla en el documento, pero suelen ser consideradas plagas por sus excrementos, enfermedades y anidamiento en techos o estructuras.",
-    symptoms: [
-      "Suciedad en fachadas y techos",
-      "Transmisión de enfermedades respiratorias",
-    ],
-    treatment: "No especificado",
-    prevention: "No especificado",
   },
   roedores: {
     name: "Roedores",

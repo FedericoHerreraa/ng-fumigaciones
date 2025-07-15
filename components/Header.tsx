@@ -116,7 +116,6 @@ export const Header = () => {
 
 const MobileMenu = ({ pathname }: { pathname: string }) => {
     const [open, setOpen] = useState(false)
-    // const router = useRouter()
 
     const closeSheet = () => setOpen(false)
 
@@ -211,8 +210,6 @@ const MobileMenu = ({ pathname }: { pathname: string }) => {
 }
 
 const DesktopMenu = ({ pathname }: { pathname: string }) => {
-    // const router = useRouter()
-
     return (
         <div className="relative z-10 h-full flex items-center justify-between px-8 lg:px-16">
             <nav className="flex items-center gap-3">
@@ -231,13 +228,6 @@ const DesktopMenu = ({ pathname }: { pathname: string }) => {
                             window.history.pushState(null, '', '#services');
                             scrollToSection('services');
                         }, 300);
-                        // if (pathname !== '/web') {
-                        //     router.push('/')
-                            
-                        // } else {
-                        //     window.history.pushState(null, '', '#services');
-                        //     scrollToSection('services');
-                        // }
                     }}
                     className={`group cursor-pointer flex items-center gap-2 px-5 py-2 rounded-xl font-medium text-sm lg:text-base transition-all duration-300 ease-in-out hover:bg-white/15 hover:shadow-lg hover:scale-105 border border-[#4a6b4d] ${pathname === '/services' ? 'bg-white/20 text-white shadow-md' : 'text-green-100 border-white/10'}`}
                 >

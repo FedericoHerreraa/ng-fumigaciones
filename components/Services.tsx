@@ -24,11 +24,6 @@ const services = [
     desc: "Desinfección y control de pulgas en hogares, mascotas y ambientes cerrados.",
   },
   {
-    name: "Palomas",
-    image: '/web/images/palomas.png',
-    desc: "Soluciones para evitar la presencia y anidación de palomas en techos y balcones.",
-  },
-  {
     name: "Roedores",
     image: '/web/images/roedores.png',
     desc: "Control integral de roedores con métodos seguros y efectivos.",

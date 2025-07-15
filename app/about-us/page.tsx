@@ -48,7 +48,6 @@ export default function AboutUs() {
       </section>
 
       <Values />
-      {/* <Opinions /> */}
       <CTA />
     </div>
   );

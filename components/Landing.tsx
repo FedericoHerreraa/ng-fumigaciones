@@ -41,8 +41,7 @@ export const Landing = () => {
             cuidamos tu salud
           </h1>
           <p className="text-green-100 text-lg md:text-xl font-medium max-w-lg">
-            Expertos en control de plagas y desinfección ambiental para hogares,
-            empresas y consorcios.
+            Expertos en control de plagas y desinfección ambiental para consorcios, hogares, comercios, oficinas, galpones, industrias, instituciones educativas, sanatorios u hospitales, laboratorios o cualquier otro tipo de establecimiento.
             <span className="block mt-2 text-green-200 text-base font-normal">
               Servicio rápido, seguro y certificado.
             </span>
