@@ -21,61 +21,53 @@ export const FAQs = () => {
           Preguntas Frecuentes
         </h2>
         <Accordion type="single" collapsible className="w-full space-y-4">
-          <AccordionItem
-            value="item-1"
-            className="rounded-2xl shadow-lg border border-green-200 transition-all hover:shadow-2xl"
-          >
-            <AccordionTrigger className="flex items-center justify-between w-full px-6 py-5 text-lg font-semibold text-green-800 hover:text-green-900 transition-colors cursor-pointer group">
-              ¿Qué servicios de desinfección ofrecen?
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-5 pt-1 text-gray-700 text-base border-t border-green-100">
-              Ofrecemos una amplia gama de servicios de desinfección, incluyendo
-              limpieza de oficinas, hogares, y espacios comerciales, así como
-              tratamientos específicos para eliminar plagas.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem
-            value="item-2"
-            className="rounded-2xl shadow-lg bg-white/80 border border-green-200 transition-all hover:shadow-2xl"
-          >
-            <AccordionTrigger className="flex items-center justify-between w-full px-6 py-5 text-lg font-semibold text-green-800 hover:text-green-900 transition-colors cursor-pointer group">
-              ¿Cómo puedo solicitar un presupuesto?
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-5 pt-1 text-gray-700 text-base border-t border-green-100">
-              Puedes solicitar un presupuesto a través de nuestro sitio web o
-              contactándonos directamente por teléfono o WhatsApp.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem
-            value="item-3"
-            className="rounded-2xl shadow-lg bg-white/80 border border-green-200 transition-all hover:shadow-2xl"
-          >
-            <AccordionTrigger className="flex items-center justify-between w-full px-6 py-5 text-lg font-semibold text-green-800 hover:text-green-900 transition-colors cursor-pointer group">
-              ¿Qué productos utilizan en sus servicios?
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-5 pt-1 text-gray-700 text-base border-t border-green-100">
-              Utilizamos productos seguros y efectivos, aprobados por las
-              autoridades sanitarias, para garantizar la salud y seguridad de
-              nuestros clientes.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem
-            value="item-4"
-            className="rounded-2xl shadow-lg bg-white/80 border border-green-200 transition-all hover:shadow-2xl"
-          >
-            <AccordionTrigger className="flex items-center justify-between w-full px-6 py-5 text-lg font-semibold text-green-800 hover:text-green-900 transition-colors cursor-pointer group">
-              ¿Realizan servicios de emergencia?
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-5 pt-1 text-gray-700 text-base border-t border-green-100">
-              Sí, ofrecemos servicios de emergencia para situaciones críticas
-              que requieren atención inmediata.
-            </AccordionContent>
-          </AccordionItem>
+          {questions.map((faq, index) => (
+            <AccordionItem
+              key={faq.id}
+              value={faq.id}
+              className={`rounded-2xl shadow-lg border border-green-200 transition-all hover:shadow-2xl ${
+                index === 0 ? "" : "bg-white/80"
+              }`}
+            >
+              <AccordionTrigger className="flex items-center justify-between w-full px-6 py-5 text-lg font-semibold text-green-800 hover:text-green-900 transition-colors cursor-pointer group">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-5 pt-1 text-gray-700 text-base border-t border-green-100">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
         </Accordion>
       </div>
     </div>
   );
 };
+
+
+const questions = [
+  {
+    id: "item-1",
+    question: "¿Qué servicios de desinfección ofrecen?",
+    answer: "Sacar la limpieza de oficinas hogares y espacios. Ofrecemos una amplia gama de servicios de desinfección. Nos especializamos en la eliminación efectiva brindando soluciones adaptadas a cada necesidad."
+  },
+  {
+    id: "item-2", 
+    question: "¿Cómo puedo solicitar un presupuesto?",
+    answer: "Puedes solicitar un presupuesto a través de nuestro sitio web o contactándonos directamente por teléfono o WhatsApp."
+  },
+  {
+    id: "item-3",
+    question: "¿Qué productos utilizan en sus servicios?", 
+    answer: "Utilizamos productos seguros y efectivos, aprobados por las autoridades sanitarias, para garantizar la salud y seguridad de nuestros clientes."
+  },
+  {
+    id: "item-4",
+    question: "¿Realizan servicios de emergencia?",
+    answer: "Sí, ofrecemos servicios de emergencia para situaciones críticas que requieren atención inmediata."
+  },
+  {
+    id: "item-5",
+    question: "¿Por qué elegir nuestros servicios?",
+    answer: "Contamos con técnicos especializados, métodos y productos seguros."
+  }
+]

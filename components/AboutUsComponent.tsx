@@ -18,7 +18,7 @@ export const AboutUsComponent = () => {
           Somos <span className="text-green-700">NG Desinfecciones</span>
         </h1>
         <p className="text-green-900/80 text-lg md:text-md mb-6 max-w-xl">
-          Más de una década protegiendo hogares y empresas con soluciones
+          Más de 25 años protegiendo hogares y empresas con soluciones
           profesionales en desinfección y control de plagas. Nuestro compromiso
           es tu tranquilidad y la de los tuyos.
         </p>
